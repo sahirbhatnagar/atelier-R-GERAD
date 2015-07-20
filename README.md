@@ -8,7 +8,7 @@ en collaboration avec le [GERAD](https://gerad.ca/fr)
 **Responsable**: [Vahid Partovi Nia](http://vahid.probstat.ca/)  
 **Diapos**: &agrave; venir  
 
-[Cliquez ici pour vous inscrire](https://gerad.ca/events/1214)
+[Cliquez i&ccedil;i pour vous inscrire](https://gerad.ca/events/1214)
 
 ----
 
