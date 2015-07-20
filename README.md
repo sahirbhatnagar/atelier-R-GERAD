@@ -26,12 +26,14 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ### Livres
 
+* [Introduction &agrave; la programmation en R](https://cran.r-project.org/doc/contrib/Goulet_introduction_programmation_R.pdf)
 * [Reproducible research with R and RStudio](http://www.amazon.com/exec/obidos/ASIN/1466572841/7210-20)
 * [Dynamic documents with R and knitr](http://www.amazon.com/exec/obidos/ASIN/1482203537/7210-20)
 
 
 ### Site Internet
 
+* [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [CRAN Reproducible Research Task View](http://cran.r-project.org/web/views/ReproducibleResearch.html)
 * [knitr chunk options](http://yihui.name/knitr/options/)
 * [Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/KnitrHowto)
