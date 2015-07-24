@@ -47,4 +47,9 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ----
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Cette cr&eacute;ation est mise &agrave; disposition selon le contrat <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Attribution-Partage dans les m&ecirc;mes conditions 4.0 International</a>  de Creative Commons.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Cette cr&eacute;ation est mise &agrave; disposition selon le contrat <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Attribution-Partage dans les m&ecirc;mes conditions 4.0 International</a>  de Creative Commons.  
+
+Vous &ecirc;tes autoris&eacute; &agrave;:  
+* **Partager** — copier, distribuer et communiquer le mat&eacute;riel par tous moyens et sous tous formats
+* **Adapter** — remixer, transformer et cr&eacute;er &agrave; partir du mat&eacute;riel pour toute utilisation, y compris commerciale.
+
