@@ -1,0 +1,130 @@
+%\documentclass[10pt,handout]{beamer}
+\documentclass[10pt]{beamer}
+\usepackage{etex} % helps fix \newdimen error which is cause when ctable is loaded with other packages
+\usepackage{comment}
+\usepackage{ctable}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{url}
+\usepackage{color, colortbl}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows,shapes.symbols,decorations.pathreplacing}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30,text width=2.0cm]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30,text width=1.5cm]
+\tikzstyle{process} = [rectangle, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=orange!30,text width=2cm]
+\tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{both} = [thick,<->,>=stealth, red]
+
+\tikzset{myshade/.style={minimum size=.4cm,shading=radial,inner color=white,outer color={#1!90!gray}}}
+\newcommand\mycirc[1][]{\tikz\node[circle,myshade=#1]{};}
+\newcommand\myrect[1][]{\tikz\node[rectangle,myshade=#1]{};}
+\newcommand\mystar[1][]{\tikz\node[star,star points=15,star point height=2pt,myshade=#1]{};}
+\newcommand\mydiamond[1][]{\tikz\node[diamond,myshade=#1]{};}
+\newcommand\myellipse[1][]{\tikz\node[ellipse,myshade=#1]{};}
+\newcommand\mykite[1][]{\tikz\node[kite,myshade=#1]{};}
+\newcommand\mydart[1][]{\tikz\node[dart,myshade=#1]{};}
+\newcommand\mycloud[1][]{\tikz\node[cloud,myshade=#1]{};}
+
+%\usepackage{subcaption}
+\usepackage{subfig}
+%\usepackage{caption}
+
+\mode<presentation>
+\usetheme{Hannover}
+\usecolortheme{rose}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{frametitle}[default][left]
+
+\usepackage[]{hyperref}
+\hypersetup{
+    unicode=false,          
+    pdftoolbar=true,        
+    pdfmenubar=true,        
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Reproducible Research},    % title
+    pdfauthor={Sahir Rai Bhatnagar},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Sahir Rai Bhatnagar},   % creator of the document
+    pdfproducer={Sahir Rai Bhatnagar}, % producer of the document
+    pdfkeywords={}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=black,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+\begin{document}
+
+<<setup, echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE, results='hide'>>=
+options(width=60, digits=2)
+set.seed(45)
+opts_chunk$set(echo = FALSE, tidy = FALSE, cache = FALSE, warning = FALSE, message = FALSE)
+knit_hooks$set(crop = hook_pdfcrop)
+opts_template$set(
+    fig.large = list(fig.width = 7, fig.height = 5, fig.align = 'center', crop = TRUE, fig.pos = 'h'),
+    fig.small = list(fig.width = 6, fig.height = 4, fig.align = 'center', crop = TRUE, fig.pos = 'h'),
+    fig.full = list(fig.width = 8, fig.height = 6, fig.align = 'center', crop = TRUE, fig.pos = 'h')
+)
+knitr::read_chunk("slides-packages.R")
+@
+
+<<required-packages,echo=FALSE,warning=FALSE,message=FALSE>>=
+@
+
+\title[RR: Intro to \texttt{knitr}]{Reproducible Research}
+\subtitle{An Introduction to \texttt{knitr}}
+
+\author[]{Sahir Rai Bhatnagar%
+\thanks{\href{https://github.com/sahirbhatnagar/knitr-tutorial}{https://github.com/sahirbhatnagar/knitr-tutorial}%
+}}
+
+\date{May 28, 2014}
+
+%\makebeamertitle
+
+\maketitle
+
+\begin{frame}{Acknowledgements}
+% \hspace*{-1.9cm}\parbox[t]{\textwidth}
+%\frametitle{Acknowledgements}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+\column{.45\textwidth} % Left column and width
+
+\begin{itemize}
+%\scriptsize
+\item Dr. Erica Moodie
+\item Maxime Turgeon (Windows)
+\item Kevin McGregor (Mac)
+\item Greg Voisin
+\item Don Knuth (\TeX)
+\item Friedrich Leisch (Sweave)
+\item Yihui Xie (knitr)
+\item You
+\end{itemize}
+
+\column{.45\textwidth} % Right column and width
+\begin{figure}
+\includegraphics[width=0.6\columnwidth]{eboh50.pdf}\\[5mm]
+\includegraphics[width=1.0\columnwidth]{crm.png}
+%\includegraphics[width=0.7\columnwidth]{Logo-LUDMER.jpg}
+\end{figure}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Disclaimer \#1}
+\begin{itemize}
+\item Feel free to Ask questions
+\item Interrupt me often
+\item You don't need to raise your hand to speak
+\end{itemize}
+\end{frame}
+
+\end{document}
