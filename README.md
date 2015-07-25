@@ -51,7 +51,9 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ### Site Internet
 
+* [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
+* [Chercher des librairies](http://www.r-pkg.org/)
 * [CRAN Reproducible Research Task View](http://cran.r-project.org/web/views/ReproducibleResearch.html)
 * [knitr chunk options](http://yihui.name/knitr/options/)
 * [Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/KnitrHowto)

@@ -22,6 +22,24 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ----
 
+## Table des mati&egrave;res
+
+1. Pr&eacute;sentation du langage R
+  - Pourquoi vous etes la? rajouter la valeur a vos competences techniques
+  - Bref historique et descripton
+  - Charact&eacute;ristiques de R
+  - RStudio
+  - O&ugrave; trouver de la documentation (CRAN, [http://www.rdocumentation.org/](http://www.rdocumentation.org/), Google is your friend)
+  - Librairiees
+
+2. Bases du langage R
+  - Les objets R (vecteurs, matrices, data frames, listes)
+  - R&eacute;pertoire de travail
+
+
+
+----
+
 ## R&eacute;f&eacute;rences
 
 ### Livres
@@ -33,6 +51,7 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ### Site Internet
 
+* [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [CRAN Reproducible Research Task View](http://cran.r-project.org/web/views/ReproducibleResearch.html)
 * [knitr chunk options](http://yihui.name/knitr/options/)
@@ -47,4 +66,9 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ----
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Cette cr&eacute;ation est mise &agrave; disposition selon le contrat <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Attribution-Partage dans les m&ecirc;mes conditions 4.0 International</a>  de Creative Commons.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Cette cr&eacute;ation est mise &agrave; disposition selon le contrat <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Attribution-Partage dans les m&ecirc;mes conditions 4.0 International</a>  de Creative Commons.  
+
+Vous &ecirc;tes autoris&eacute; &agrave;:  
+* **Partager** — copier, distribuer et communiquer le mat&eacute;riel par tous moyens et sous tous formats
+* **Adapter** — remixer, transformer et cr&eacute;er &agrave; partir du mat&eacute;riel pour toute utilisation, y compris commerciale.
+
