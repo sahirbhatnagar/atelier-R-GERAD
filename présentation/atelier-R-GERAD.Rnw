@@ -7,11 +7,21 @@
 \usepackage{comment}
 \usepackage{ctable}
 \usepackage{amsmath,amsthm,amssymb}
+\newtheorem{rcode}{R Code}[section]
 \usepackage{url}
+
+%\usepackage[usenames]{xcolor}
 \usepackage{color, colortbl}
 \usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+%\usepackage{aeguill}
+
 \usetikzlibrary{shapes.geometric, arrows,shapes.symbols,decorations.pathreplacing}
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30,text width=2.0cm]
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=black, fill=pinkish,text width=3.5cm]
+\tikzstyle{startstop2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=black, fill=background,text width=2.5cm]
+\tikzstyle{startstop3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, draw=black, fill=beige,text width=3.0cm]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30,text width=1.5cm]
 \tikzstyle{process} = [rectangle, minimum width=1cm, minimum height=1cm, text centered, draw=black, fill=orange!30,text width=2cm]
 \tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=green!30]
@@ -61,25 +71,38 @@
     urlcolor=cyan           % color of external links
 }
 
-\RequirePackage{color}
+%\RequirePackage{color}
 
 % define a bunch of colors
 \definecolor{gray}{RGB}{110,110,110}
 \definecolor{darkgray}{RGB}{100,100,100}
 \definecolor{lightgray}{RGB}{200,200,200}
 \definecolor{turquoise}{RGB}{81,193,188}
-\definecolor{tomato}{RGB}{229,136,136}
+\definecolor{tomato}{RGB}{255,136,136}
 \definecolor{mandarina}{RGB}{229,169,25}
 \definecolor{foreground}{RGB}{81,141,193}
 \definecolor{background}{RGB}{246,244,240}
 \definecolor{highlight}{RGB}{229,169,25}
 \definecolor{lowlight}{RGB}{200,200,200}
+\definecolor{beige}{RGB}{255,255,240}
+\definecolor{pinkish}{RGB}{255,223,247}
+%\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+%\definecolor{antiflashwhite}{rgb}{0.95, 0.95, 0.96}
 
 % some convenient commands
 \newcommand{\code}[1]{\texttt{#1}}
 \newcommand{\high}[1]{\textcolor{highlight}{#1}}
 \newcommand{\low}[1]{\textcolor{lowlight}{#1}}
 \newcommand{\highcode}[1]{\textcolor{highlight}{\texttt{#1}}}
+
+\setbeamercolor{block body}{bg=beige}
+
+%\setbeamercovered{highly dynamic}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
 
 %\setbeamercolor{subtitle}{fg=turquoise}
 
@@ -88,9 +111,9 @@
 \begin{document}
 
 <<setup, echo=FALSE,warning=FALSE,message=FALSE,cache=FALSE, results='hide'>>=
-options(width=60, digits=2)
+#options(width=60, digits=2)
 set.seed(45)
-opts_chunk$set(echo = FALSE, tidy = FALSE, cache = FALSE, warning = FALSE, message = FALSE)
+opts_chunk$set(echo = TRUE, tidy = FALSE, cache = FALSE, warning = FALSE, message = FALSE)
 knit_hooks$set(crop = hook_pdfcrop)
 opts_template$set(
     fig.large = list(fig.width = 7, fig.height = 5, fig.align = 'center', crop = TRUE, fig.pos = 'h'),
@@ -98,10 +121,10 @@ opts_template$set(
     fig.full = list(fig.width = 8, fig.height = 6, fig.align = 'center', crop = TRUE, fig.pos = 'h')
 )
 # smaller font size for chunks
-opts_chunk$set(size = 'tiny')
+#opts_chunk$set(size = 'tiny')
 thm <- knit_theme$get("bclear")
 knit_theme$set(thm)
-options(width=78)
+options(width=78, digits = 2)
 knit_hooks$set(rcode=function(before, options, envir)
 {
 if (before)
@@ -145,9 +168,10 @@ knitr::read_chunk("slides-packages.R")
 
 \begin{itemize}
 %\scriptsize
-\item Dr. Vahid Partovi Nia
-\item Greg Voisin
+\item John Chambers
 \item Ross Ihaka et Robert Gentleman
+\item Greg Voisin
+\item Dr. Vahid Partovi Nia
 \item Toi
 \end{itemize}
 
@@ -165,6 +189,8 @@ knitr::read_chunk("slides-packages.R")
 
 \begin{frame}{Avis \#1}
 \begin{itemize}
+\item Ce\c{c}i est un atelier interactif
+\item On va faire beaucoup d'exercises
 \item N'h\'{e}sitez pas \`{a} posez des questions
 \end{itemize}
 \end{frame}
@@ -207,7 +233,7 @@ knitr::read_chunk("slides-packages.R")
 
 
 
-\section{1. Pr\'{e}sentation du langage R}
+\section{1.Pr\'{e}sentation du langage R}
 
 \setbeamercolor{normal text}{fg=gray,bg=black}
 \begin{frame}[plain]
@@ -217,6 +243,24 @@ knitr::read_chunk("slides-packages.R")
  \end{center}
  }
 \end{frame}
+
+
+\setbeamercolor{normal text}{fg=black,bg=background}
+\begin{frame}[plain]
+\hspace*{-1.0cm}\parbox[t]{\textwidth}{
+\begin{block}{Objectifs du chapitre}
+\begin{enumerate}
+\item Comprendre les avantages d'apprendre R
+\item Conna\^{\i}tre la provenance du langage R et ses charact\'{e}ristiques
+\item D\'{e}marrer une session R et ex\'{e}cuter des commandes simple
+\item Utiliser des fichiers de script R de mani\`{e}re interactive
+\item Cr\'{e}er, modifier et sauvegarder ses propres fichiers de \mbox{script R}
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+
+
 
 \setbeamercolor{normal text}{fg=gray,bg=white}
 \subsection{Pourquoi vous \^{e}tes l\`{a}?}
@@ -276,6 +320,16 @@ r\'{e}f\'{e}rence: \href{http://r4stats.com/articles/popularity/}{http://r4stats
 \vspace{0.05in}
 
 Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-with-r-1.16609}{\textit{Nature}}
+\end{frame}
+
+
+\begin{frame}{Analyser vos données}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item \'{E}norme resources d'outils statistiques
+\item Représenter graphiquement des jeux de données multivariables
+\item Intégrer votre code R avec des sites internet
+\end{itemize}
 \end{frame}
 
 
@@ -352,7 +406,33 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
   \setlength\itemsep{2em}
 \item D\'{e}veloppement actif pour la cr\'{e}ation de nouveau outils dans plusieurs domaines $\rightarrow$ \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/} 
 \item Facilement voir le code des autres avec GitHub $\rightarrow$ \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
+\item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet $\rightarrow$ \href{http://stackoverflow.com/questions/tagged/r}{stackoverflow},  \href{http://www.rdocumentation.org/}{http://www.rdocumentation.org/}, \href{http://www.r-bloggers.com/}{http://www.r-bloggers.com/}, \href{https://twitter.com/search?q=\%23rstats}{twitter}, \href{http://blog.revolutionanalytics.com/local-r-groups.html}{R user groups}, 
+\href{https://www.google.ca/}{Google}
 \end{itemize}
+
+%\begin{center}
+%\begin{figure}
+%\includegraphics[scale=0.35]{meta.png}
+%\caption{\href{http://www.r-pkg.org/}{http://www.r-pkg.org/}}
+%\end{figure}
+%\end{center}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Outil statistique qui optimize l'approche matricielle}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Langage bas\'{e} sur la notion de vecteur, ce qui simplifie les calculs math\'{e}matiques 
+\item R\'{e}duit consid\'{e}rablement le recours aux structures it\'{e}ratives
+(boucles for , while , etc.)
+\end{itemize}
+\pause 
+<<rcode=TRUE>>=
+c(1,2,3) + c(4,5,6)
+@
 
 %\begin{center}
 %\begin{figure}
@@ -367,16 +447,23 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 
 
-
 \begin{frame}{O\`{u} trouver de la documentation}
 \begin{itemize}
-\item \texttt{help.start()} for general help
-\item \texttt{help(function\_name)} or \texttt{?function\_name}
-\item \texttt{??search\_term}
-\item \texttt{example(function\_name)}
-\item  \href{http://stackoverflow.com/questions/tagged/r}{\underline{\textcolor{blue}{Stackoverflow}}}
-\item refer to 'Short intro to R' document posted on MyCourses
-\item Google it
+  \setlength\itemsep{1.5em}
+\item Pour l'aide g\'{e}n\'{e}ral: \texttt{help.start()} 
+\item Lorsque l'on conna\^{i}t le nom de la commande R: \mbox{\texttt{help(nom de la fonction)}} o\`{u} \mbox{\texttt{?nom de la fonction}}
+\begin{itemize}
+\item exemple: \code{help(lm)}, \code{?table}
+\end{itemize}
+\item \`{A} partir des mot-cl\'{e}s: \texttt{??mot cl\'{e}}
+\begin{itemize}
+\item exemple: \code{??regression}
+\end{itemize}
+\item Toutes les commandes fournies par un package: \code{help(package=nom du package)}
+\begin{itemize}
+\item exemple: \code{help(package = datasets)}
+\end{itemize}
+\item F1 sur votre clavier 
 \end{itemize}
 \end{frame}
 
@@ -420,16 +507,145 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{frame}
 
 
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# Basé sur les exemples de Vincent Goulet
+# et de CRAN:
+# https://cran.r-project.org/doc/manuals/R-intro.html
+
+# Démarrer l'interface pour le documentation
+# et naviguer les différentes resources
+help.start()
+@
+\end{frame}
+
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# Générer deux vecteurs de nombres pseudo-aléatoires
+# issus d’une loi normale centrée réduite.
+x <- rnorm(50)
+y <- rnorm(50)
+
+# Graphique des couples (x, y).
+plot(x, y)
+
+# Graphique d’une approximation de la densité du 
+# vecteur x
+dens.x <- density(x)
+plot(dens.x)
+@
+\end{frame}
+
+
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# voir la matière de x
+x
+
+# voir les objets de votre workspace
+ls()
+
+# supprimer les deux vecteurs x et y
+rm(x,y)
+
+# voir la matière de x
+x
+
+# voir les objets de votre workspace
+ls()
+@
+\end{frame}
+
+
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# Générer la suite 1, 2, ..., 20.
+x <- 1:20
+
+# créer un autre vecteur en fonction de x
+w <- 1 + sqrt(x)/2
+
+# créer un data frame de deux colonnes et
+# voir sa matière 
+dt <- data.frame(x = x, y = x + rnorm(x)*w)
+dt
+
+# estimer un modèle linéaire et voir les
+# résultats
+fit <- lm(y ~ x, data = dt)
+summary(fit)
+@
+
+
+\end{frame}
+
+
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# La fonction ’seq’ sert à générer des suites 
+# plus générales.
+seq(from = -5, to = 10, by = 3)
+seq(from = -5, length = 10)
+
+# La fonction ’rep’ sert à répéter des valeurs.
+rep(1, 5) # répéter 1 cinq fois
+rep(1:5, 5) # répéter le vecteur 1,...,5 cinq fois
+rep(1:5, each = 5) # répéter chaque élément cinq fois
+@
+\end{frame}
+
+
+
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# Arithmétique vectorielle
+v <- 1:12  # initialisation d’un vecteur
+v + 2 # additionner 2 à chaque élément de v
+v * -12:-1 # produit élément par élément
+v + 1:3 # le vecteur le plus court est recyclé
+
+# Vecteur de nombres uniformes sur 
+# l’intervalle [1, 10]. Le point-virgule
+# signifie une nouvelle ligne
+v <- runif(12, min = 1, max = 10); v
+
+# Pour afficher le résultat d’une affectation,
+# placer la commande entre parenthèses.
+( v <- runif(12, min = 1, max = 10) )
+@
+\end{frame}
 
 
 
 
+\begin{frame}[fragile, plain]
+<<rcode=TRUE, eval=FALSE>>=
+# trouver le répertoire où se trouve le
+# jeux de donnés 'morley', qui est inclu avec
+# l'installation de R
+filepath <- system.file("data", "morley.tab", 
+            package="datasets")
+
+# importer les donnés dans un objet appeller 'mm'
+mm <- read.table(filepath)
+
+# Graphique 
+plot(mm$Expt, mm$Speed, 
+main="Speed of Light Data", xlab="Experiment No.")
+
+# Terminer la session
+q()
+@
+\end{frame}
+\endgroup
 
 
 
-
-
-\section{2. Bases du langage R}
+\section{2.Bases du langage R}
 
 \setbeamercolor{normal text}{fg=gray,bg=black}
 \begin{frame}[plain]
@@ -440,7 +656,127 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
  }
 \end{frame}
 
+\setbeamercolor{normal text}{fg=black,bg=background}
+\begin{frame}[plain]
+\hspace*{-1.0cm}\parbox[t]{\textwidth}{
+\begin{block}{Objectifs du chapitre}
+\begin{enumerate}
+\item \'{E}crire et interpr\'{e}ter la syntaxe et la s\'{e}mantique du langage R.
+\item Identifier les principaux types de donn\'{e}es disponibles dans R.
+\item Utiliser les divers modes d’objets (en particulier \code{numeric, character} et \code{logical}) et la conversion automatique de l'un \`{a} l'autre.
+\item Cr\'{e}er et manipuler des vecteurs, matrices, tableaux, listes et data frames.
+\item Extraire des donn\'{e}es d'un objet ou y affecter de nouvelles valeurs \`{a} l'aide des diverses m\'{e}thodes d'indi\c{c}age.
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+
+
+
 \setbeamercolor{normal text}{fg=gray,bg=white}
+
+\subsection{Commandes R}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Commandes R}}
+ \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Expression et affectation} 
+\begin{enumerate}
+\item Une \textbf{expression} est immédiatement évaluée et le résultat est affiché à l’écran:
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = TRUE>>=
+2+3;pi;cos(pi/4)
+@
+\seti
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Expression et affectation} 
+\begin{enumerate}
+\conti
+\item Lors d’une \textbf{affectation}, une expression est évaluée, mais le résultat est stocké dans un objet (variable) et rien n’est affiché à l’écran
+\begin{itemize}
+\item Le symbole d’affectation est <-  
+\item les deux caractères < et - placés obligatoirement l'un à la suite de l'autre:
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = TRUE>>=
+a <- 5
+a
+b <- a - 2
+b
+@
+\seti
+\end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Expression et affectation} 
+\begin{enumerate}
+\conti
+\item Pour affecter le résultat d’un calcul dans un objet et simultanément afficher ce résultat, il suffit de placer l'affectation entre parenthèses pour ainsi créer une nouvelle expression
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = TRUE>>=
+(a <- 2 + 3)
+@
+\pause \item Le signe = est valide également, mais il n'est pas recommendé de l'utiliser dans ce contexte
+\begin{itemize}
+\item cette pratique est susceptible d'engendrer de la confusion avec les constructions \code{nom = valeur} dans les appels de fonction
+\end{itemize}
+
+\end{enumerate}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Commandes de bases}
+ %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
+\begin{tikzpicture}
+\node (expr) [startstop] {\code{sessionInfo()}
+\code{install.packages()}
+\code{library()}\textcolor{pinkish}{texxxx}
+\code{setwd()}\textcolor{pinkish}{teccc}
+\code{getwd()}\textcolor{pinkish}{teccc}
+\code{rm()}\textcolor{pinkish}{tevvvvvvv}
+\mbox{\code{ls()}\textcolor{pinkish}{tevvvvvvv}}  };
+\node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{c()}
+\code{data.frame()}
+\code{matrix()}
+\code{list()}};
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.0cm] {\code{load()}
+\code{read.table()}
+\code{source()}};
+\draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2cm] 
+{\footnotesize Espace de travail};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3cm] 
+{\footnotesize Objets R les plus utilisés};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
+{\footnotesize Accesser les données et scripts R};
+\end{tikzpicture}
+%}
+\end{frame}
+
+
+
+
+
+
+
+
 \subsection{Les objets R}
 
 \begin{frame}
@@ -449,6 +785,20 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
  \end{center}
 \end{frame}
 
+
+
+
+\begin{frame}{Les structures de données en R}
+\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tout le contenu doit être du même type}\tnote[b]{le contenu peut être de différent types}
+}{
+    																\FL
+dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
+1d & & Atomic vector & & List \NN
+2d & & Matrix & & Data frame \NN
+nd & & Array & &    \LL
+}
+
+\end{frame}
 
 
 
