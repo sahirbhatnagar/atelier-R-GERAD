@@ -11,7 +11,8 @@
 \beamer@subsectionintoc {2}{4}{Sommaire}{98}{0}{2}
 \beamer@sectionintoc {3}{3. Graphiques}{100}{0}{3}
 \beamer@subsectionintoc {3}{1}{La fonction plot}{102}{0}{3}
-\beamer@sectionintoc {4}{4. Statistiques}{105}{0}{4}
-\beamer@subsectionintoc {4}{1}{Les objets R}{106}{0}{4}
-\beamer@sectionintoc {5}{5. Cr\'{e}er des rapports reproductibles}{107}{0}{5}
-\beamer@subsectionintoc {5}{1}{Les objets R}{108}{0}{5}
+\beamer@subsectionintoc {3}{2}{\texttt {histogram} et \texttt {boxplot}}{108}{0}{3}
+\beamer@sectionintoc {4}{4. Statistiques}{111}{0}{4}
+\beamer@subsectionintoc {4}{1}{Les objets R}{112}{0}{4}
+\beamer@sectionintoc {5}{5. Cr\'{e}er des rapports reproductibles}{113}{0}{5}
+\beamer@subsectionintoc {5}{1}{Les objets R}{114}{0}{5}

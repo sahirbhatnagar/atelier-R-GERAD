@@ -1681,22 +1681,24 @@ système ou d'en ajouter de nouvelles
 \end{frame}
 
 
-\begin{frame}[fragile]{La fonction}
+\begin{frame}[fragile]{La fonction \code{plot}}
 
 \begin{itemize}
   \setlength\itemsep{2em}
 \item La fonction \code{plot} peut prendre plusieurs arguments et types d'objets
 \end{itemize}
-
+\pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{unnamed-chunk-31}\begin{alltt}
-\hlcom{# Scatter plot des valeurs d'un vecteur contre leurs indices}
+\hlcom{# Plot des valeurs d'un vecteur contre leurs indices}
 \hlcom{# équivalent à plot(mtcars[,"mpg"])}
-\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg)}
+\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg,} \hlkwc{xlab} \hlstd{=} \hlstr{"Index"}\hlstd{,} \hlkwc{ylab} \hlstd{=} \hlstr{"mpg"}\hlstd{,}
+    \hlkwc{main} \hlstd{=} \hlstr{"Titre"}\hlstd{)}
 
 \hlcom{# Graphique des couples (x, y)}
-\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg, mtcars}\hlopt{$}\hlstd{disp)}
+\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg, mtcars}\hlopt{$}\hlstd{disp,} \hlkwc{xlab} \hlstd{=} \hlstr{"mpg"}\hlstd{,}
+\hlkwc{ylab} \hlstd{=} \hlstr{"disp"}\hlstd{,} \hlkwc{main} \hlstd{=} \hlstr{"mpg vs. disp"}\hlstd{)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -1704,6 +1706,94 @@ système ou d'en ajouter de nouvelles
 \end{frame}
 
 
+\begin{frame}[fragile]{La fonction \code{plot}}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item La fonction \code{plot} peut aussi prendre un objet du modèle linéaire comme argument
+\item Ceci est un exemple qui démontre pourquoi R est un langage orientée objet
+\end{itemize}
+\pause 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-32}\begin{alltt}
+\hlcom{# importer 'mtcars.RData'}
+\hlkwd{load}\hlstd{(}\hlstr{"mtcars.RData"}\hlstd{)}
+
+\hlcom{# Graphiques des 4 diagnostiques}
+\hlcom{# du modèle linéaire}
+\hlcom{# placer dans 2 rangés et 2 colonnes}
+\hlkwd{par}\hlstd{(}\hlkwc{mfrow}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{2}\hlstd{))}
+\hlkwd{plot}\hlstd{(fit)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+\subsection{\code{histogram} et \code{boxplot}}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{\code{histogram} et \code{boxplot}}}
+ \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{La fonction \code{histogram}}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+  \item Utile pour voir la distribution de tes données
+\item Pour les données continues et univariés
+\end{itemize}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-33}\begin{alltt}
+\hlcom{# la taille de 237 étudiants disponibles dans le jeu}
+\hlcom{# de données 'survey' du library(MASS)}
+\hlkwd{library}\hlstd{(MASS)}
+
+\hlcom{# voir le nom des colonnes}
+\hlkwd{names}\hlstd{(survey)}
+
+\hlcom{# histogram de la taille et montrer la fréquence}
+\hlcom{# de chaque barre}
+\hlkwd{hist}\hlstd{(survey}\hlopt{$}\hlstd{Height,} \hlkwc{labels} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{La fonction \code{boxplot}}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Utile pour voir la différence d'un variable continu entre plusieurs groupes
+\end{itemize}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-34}\begin{alltt}
+\hlcom{# visualiser la différence de la taille entre les }
+\hlcom{# hommes et les femme dans le jeu}
+\hlcom{# de données 'survey' du library(MASS)}
+
+\hlkwd{boxplot}\hlstd{(survey}\hlopt{$}\hlstd{Height} \hlopt{~} \hlstd{survey}\hlopt{$}\hlstd{Sex,}
+         \hlkwc{ylab} \hlstd{=} \hlstr{"Taille (cm)"}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
 
 
 \section{4. Statistiques}

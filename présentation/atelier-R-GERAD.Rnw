@@ -1436,25 +1436,103 @@ library(rmarkdown)
 \end{frame}
 
 
-\begin{frame}[fragile]{La fonction}
+\begin{frame}[fragile]{La fonction \code{plot}}
 
 \begin{itemize}
   \setlength\itemsep{2em}
 \item La fonction \code{plot} peut prendre plusieurs arguments et types d'objets
 \end{itemize}
-
+\pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-# Scatter plot des valeurs d'un vecteur contre leurs indices
+# Plot des valeurs d'un vecteur contre leurs indices
 # équivalent à plot(mtcars[,"mpg"])
-plot(mtcars$mpg) 
+plot(mtcars$mpg, xlab = "Index", ylab = "mpg", 
+    main = "Titre") 
 
 # Graphique des couples (x, y)
-plot(mtcars$mpg, mtcars$disp)
+plot(mtcars$mpg, mtcars$disp, xlab = "mpg", 
+ylab = "disp", main = "mpg vs. disp")
 @
 
 \end{frame}
 
 
+\begin{frame}[fragile]{La fonction \code{plot}}
+
+\begin{itemize}
+  \setlength\itemsep{1.5em}
+\item La fonction \code{plot} peut aussi prendre un objet du modèle linéaire comme argument
+\item Ceci est un exemple qui démontre pourquoi R est un langage orientée objet
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# importer 'mtcars.RData'
+load("mtcars.RData") 
+
+# Graphiques des 4 diagnostiques
+# du modèle linéaire
+# placer dans 2 rangés et 2 colonnes
+par(mfrow=c(2,2))
+plot(fit)
+@
+
+\end{frame}
+
+
+\subsection{\code{histogram} et \code{boxplot}}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{\code{histogram} et \code{boxplot}}}
+ \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{La fonction \code{histogram}}
+
+\begin{itemize}
+  \setlength\itemsep{1.5em}
+  \item Utile pour voir la distribution de tes données
+\item Pour les données continues et univariés
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# la taille de 237 étudiants disponibles dans le jeu
+# de données 'survey' du library(MASS)
+library(MASS) 
+
+# voir le nom des colonnes
+names(survey)
+
+# histogram de la taille et montrer la fréquence
+# de chaque barre
+hist(survey$Height, labels = TRUE)
+@
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{La fonction \code{boxplot}}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Utile pour voir la différence d'un variable continu entre plusieurs groupes
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# visualiser la différence de la taille entre les 
+# hommes et les femmes dans le jeu
+# de données 'survey' du library(MASS)
+
+boxplot(survey$Height ~ survey$Sex, 
+         ylab = "Taille (cm)")
+@
+
+\end{frame}
 
 
 \section{4. Statistiques}
