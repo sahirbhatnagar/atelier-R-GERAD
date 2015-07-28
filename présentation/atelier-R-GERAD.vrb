@@ -1,22 +1,20 @@
-\frametitle{Expression et affectation}
-\begin{enumerate}
-\conti
-\item Pour affecter le résultat d’un calcul dans un objet et simultanément afficher ce résultat, il suffit de placer l'affectation entre parenthèses pour ainsi créer une nouvelle expression
-\pause
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-11}\hfill{}\begin{alltt}
-\hlstd{(a} \hlkwb{<-} \hlnum{2} \hlopt{+} \hlnum{3}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-## [1] 5
-\end{verbatim}
-\end{rcode}\end{kframe}
-\end{knitrout}
-\pause \item Le signe = est valide également, mais il n'est pas recommendé de l'utiliser dans ce contexte
+\frametitle{Attributs}
+
 \begin{itemize}
-\item cette pratique est susceptible d'engendrer de la confusion avec les constructions \code{nom = valeur} dans les appels de fonction
+  %\setlength\itemsep{2em}
+\item Les attributs d'un objet sont des éléments d'information additionnels liés à cet objet
+\item Pour chaque attribut, il existe une fonction du même nom servant à extraire l'attribut correspondant d’un objet
 \end{itemize}
 
-\end{enumerate}
+\ctable[caption={Attributs les plus usuels d'un objet},label=tab:table1,pos=h!,doinside=\small]{ccccc}{
+}{
+     \FL
+Attribut &  & Utilisation \ML
+class & & affecte le comportement d’un objet \\
+dim & & dimensions des matrices et tableaux \\
+dimnames & & étiquettes des dimensions des matrices et tableaux \\
+names & & étiquettes des éléments d’un objet\LL
+}
+
+
 

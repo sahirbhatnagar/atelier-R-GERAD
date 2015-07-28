@@ -1,15 +1,15 @@
 \beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{1.Pr\'{e}sentation du langage R}{7}{0}{1}
-\beamer@subsectionintoc {1}{1}{Pourquoi vous \^{e}tes l\`{a}?}{9}{0}{1}
-\beamer@subsectionintoc {1}{2}{Bref historique}{15}{0}{1}
-\beamer@subsectionintoc {1}{3}{Charact\'{e}ristiques de R}{22}{0}{1}
-\beamer@subsectionintoc {1}{4}{D\'{e}marrer une session}{34}{0}{1}
-\beamer@sectionintoc {2}{2.Bases du langage R}{42}{0}{2}
-\beamer@subsectionintoc {2}{1}{Commandes R}{44}{0}{2}
-\beamer@subsectionintoc {2}{2}{Les objets R}{53}{0}{2}
-\beamer@sectionintoc {3}{3. Graphiques}{55}{0}{3}
-\beamer@subsectionintoc {3}{1}{Les objets R}{56}{0}{3}
-\beamer@sectionintoc {4}{4. Statistiques}{57}{0}{4}
-\beamer@subsectionintoc {4}{1}{Les objets R}{58}{0}{4}
-\beamer@sectionintoc {5}{5. Cr\'{e}er des rapports reproductibles}{59}{0}{5}
-\beamer@subsectionintoc {5}{1}{Les objets R}{60}{0}{5}
+\beamer@sectionintoc {1}{1.Pr\'{e}sentation du langage R}{10}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pourquoi vous \^{e}tes l\`{a}?}{12}{0}{1}
+\beamer@subsectionintoc {1}{2}{Bref historique}{18}{0}{1}
+\beamer@subsectionintoc {1}{3}{Caract\'{e}ristiques de R}{25}{0}{1}
+\beamer@subsectionintoc {1}{4}{D\'{e}marrer une session}{37}{0}{1}
+\beamer@sectionintoc {2}{2.Bases du langage R}{43}{0}{2}
+\beamer@subsectionintoc {2}{1}{Commandes R}{45}{0}{2}
+\beamer@subsectionintoc {2}{2}{Les objets R}{58}{0}{2}
+\beamer@sectionintoc {3}{3. Graphiques}{80}{0}{3}
+\beamer@subsectionintoc {3}{1}{Les objets R}{81}{0}{3}
+\beamer@sectionintoc {4}{4. Statistiques}{82}{0}{4}
+\beamer@subsectionintoc {4}{1}{Les objets R}{83}{0}{4}
+\beamer@sectionintoc {5}{5. Cr\'{e}er des rapports reproductibles}{84}{0}{5}
+\beamer@subsectionintoc {5}{1}{Les objets R}{85}{0}{5}

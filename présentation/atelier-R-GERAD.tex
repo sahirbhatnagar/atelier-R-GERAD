@@ -207,9 +207,9 @@
 
 \begin{frame}{Avis \#1}
 \begin{itemize}
-\item Ce\c{c}i est un atelier interactif
-\item On va faire beaucoup d'exercises
-\item N'h\'{e}sitez pas \`{a} posez des questions
+\item Ce\c{c}i est un \textbf{introduction} au langage R
+\pause \item On va faire beaucoup d'exercises
+\pause \item N'h\'{e}sitez pas \`{a} posez des questions
 \end{itemize}
 \end{frame}
 
@@ -220,23 +220,29 @@
 %\includegraphics[width=0.2\columnwidth]{LaTeX_logo.png}
 \end{figure}
 
-\textit{Je ne travaille pas pour, ni un auteur de ces logiciels.}
+\textit{Je n'ai aucune relation commerciale avec ces logiciels}
 
 \end{frame}
 
 \begin{frame}{Avis \#3}
 
 \begin{itemize}
-\item Le mat\'{e}riel pour cet atelier est bas\'{e} sur plusieurs resources
+\item Le mat\'{e}riel pour cet atelier est bas\'{e} sur plusieurs ressources
 \item Voir ce lien pour une liste compl\`{e}te de r\'{e}f\'{e}rences: \href{https://github.com/sahirbhatnagar/atelier-R-GERAD}{https://github.com/sahirbhatnagar/atelier-R-GERAD}
-\item Je vous sugg\`{e}re le livre par Vincent Goulet
+\item Je vous sugg\`{e}re les livre de Vincent Goulet et Hadley Wickham
 \end{itemize}
 
-
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.45\textwidth} % Left column and width
 \begin{figure}
-\includegraphics[width=0.4\columnwidth]{goulet.png}
+\includegraphics[width=0.8\columnwidth]{goulet.png}
 \end{figure}
 
+\column{.45\textwidth} % Right column and width
+\begin{figure}
+\includegraphics[width=0.6\columnwidth]{had.jpg}
+\end{figure}
+\end{columns}
 
 \end{frame}
 
@@ -249,6 +255,20 @@
 }
 \end{frame}
 
+
+\setbeamercolor{normal text}{fg=black,bg=background}
+\begin{frame}[plain]
+\hspace*{-1.0cm}\parbox[t]{\textwidth}{
+\begin{block}{Après cet atelier vous devrez \^{e}tres capables de}
+\begin{itemize}
+\item Comprendre, créer et modifier les 4 objets de bases en R (\code{vector, data.frame, matrix, list}) 
+\item Utiliser des fonctions de bases
+\item Importé un jeux de donnés à partir d'un fichier externe
+\item Créer un graphique 
+\end{itemize}
+\end{block}
+}
+\end{frame}
 
 
 \section{1.Pr\'{e}sentation du langage R}
@@ -269,9 +289,8 @@
 \begin{block}{Objectifs du chapitre}
 \begin{enumerate}
 \item Comprendre les avantages d'apprendre R
-\item Conna\^{\i}tre la provenance du langage R et ses charact\'{e}ristiques
+\item Conna\^{\i}tre la provenance du R et ses charact\'{e}ristiques
 \item D\'{e}marrer une session R et ex\'{e}cuter des commandes simple
-\item Utiliser des fichiers de script R de mani\`{e}re interactive
 \item Cr\'{e}er, modifier et sauvegarder ses propres fichiers de \mbox{script R}
 \end{enumerate}
 \end{block}
@@ -347,6 +366,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \item \'{E}norme resources d'outils statistiques
 \item Représenter graphiquement des jeux de données multivariables
 \item Intégrer votre code R avec des sites internet
+\item Assurer la reproductivité de vos analyses
 \end{itemize}
 \end{frame}
 
@@ -365,7 +385,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{center}
 \begin{figure}
 \includegraphics[scale=0.10]{john.jpg}
-\caption{S, un langage pour programmmer avec des donn\'{e}es, developp\'{e} chez Bell Laboratories dans les ann\'{e}es 1970 par une \'{e}quipe de chercheurs men\'{e}e par John M. Chambers}
+\caption{S, un langage pour programmer avec des donn\'{e}es, developp\'{e} chez Bell Laboratories dans les ann\'{e}es 1970 par une \'{e}quipe de chercheurs men\'{e}e par John M. Chambers}
 \end{figure}
 \end{center}
 \end{frame}
@@ -396,24 +416,33 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 
 
-\subsection{Charact\'{e}ristiques de R}
+\subsection{Caract\'{e}ristiques de R}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Charact\'{e}ristiques de R}}
+  \Huge{\textcolor{red}{Caract\'{e}ristiques de R}}
  \end{center}
 \end{frame}
 
 
 
+\begin{frame}{Langage de programmation orientée objet}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Ca te permet de facilement trouver et ré-utiliser les résultats de tes analyses
+\pause \item Une fonction peut complété plusieurs t\^{a}ches
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Langage de programmation interpr\'{e}t\'{e}}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Langage de programmation interpr\'{e}t\'{e}
-\pause \item Oppos\'{e} d'un langage compil\'{e}s (\code{C} ou le \code{C++})
+\item Langage de programmation interpr\'{e}t\'{e} (versus \code{C}, \code{C++}, \code{JAVA})
+\item Moin compliqué qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
 \pause \item Le programme qu'on lance pour utiliser R est l'interpr\`{e}te
-\pause \item Celui-ci prend des commandes dans le langage R, qu'il ex\`{e}cutera imm\'{e}diatement
-\pause \item  Autre exemple: \code{Excel}
+\pause \item Celui-ci prend des commandes en R, qu'il ex\`{e}cutera imm\'{e}diatement
+\pause \item  Autre exemple: \code{Python}
 \end{itemize}
 \end{frame}
 
@@ -421,11 +450,23 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}{Logiciel libre (\textit{Open Source})}
 
 \begin{itemize}
-  \setlength\itemsep{2em}
-\item D\'{e}veloppement actif pour la cr\'{e}ation de nouveau outils dans plusieurs domaines $\rightarrow$ \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/} 
-\item Facilement voir le code des autres avec GitHub $\rightarrow$ \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
-\item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet $\rightarrow$ \href{http://stackoverflow.com/questions/tagged/r}{stackoverflow},  \href{http://www.rdocumentation.org/}{http://www.rdocumentation.org/}, \href{http://www.r-bloggers.com/}{http://www.r-bloggers.com/}, \href{https://twitter.com/search?q=\%23rstats}{twitter}, \href{http://blog.revolutionanalytics.com/local-r-groups.html}{R user groups}, 
-\href{https://www.google.ca/}{Google}
+  \setlength\itemsep{1.5em}
+\item D\'{e}veloppement actif pour la cr\'{e}ation de nouveau outils dans plusieurs domaines  
+\begin{itemize}
+\item \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/}
+\end{itemize} 
+\item Facilement voir le code des autres avec GitHub 
+\begin{itemize}
+\item \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
+\end{itemize}
+\item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet  
+\begin{itemize}
+\item \href{http://stackoverflow.com/questions/tagged/r}{stackoverflow}
+\item \href{http://www.rdocumentation.org/}{http://www.rdocumentation.org/} \item \href{http://www.r-bloggers.com/}{http://www.r-bloggers.com/} 
+\item \href{https://twitter.com/search?q=\%23rstats}{twitter} 
+\item \href{http://blog.revolutionanalytics.com/local-r-groups.html}{R user groups}
+\item \href{https://www.google.ca/}{Google}
+\end{itemize}
 \end{itemize}
 
 %\begin{center}
@@ -443,14 +484,14 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Langage bas\'{e} sur la notion de vecteur, ce qui simplifie les calculs math\'{e}matiques 
-\item R\'{e}duit consid\'{e}rablement le recours aux structures it\'{e}ratives
-(boucles for , while , etc.)
+\item Langage bas\'{e} sur la notion de vecteur, ce qui simplifie les calculs math\'{e}matiques (non seulement la computation mais l'écriture aussi)
+\pause \item R\'{e}duit consid\'{e}rablement le recours aux structures it\'{e}ratives
+(boucles \code{for, while} , etc.)
 \end{itemize}
 \pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-1}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{)} \hlopt{+} \hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,}\hlnum{5}\hlstd{,}\hlnum{6}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -472,48 +513,42 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 
 
-\begin{frame}{O\`{u} trouver de la documentation}
+\begin{frame}{O\`{u} trouver de l'aide pour une fonction}
 \begin{itemize}
-  \setlength\itemsep{1.5em}
-\item Pour l'aide g\'{e}n\'{e}ral: \texttt{help.start()} 
-\item Lorsque l'on conna\^{i}t le nom de la commande R: \mbox{\texttt{help(nom de la fonction)}} o\`{u} \mbox{\texttt{?nom de la fonction}}
+  \setlength\itemsep{2em}
+%\item Pour l'aide g\'{e}n\'{e}ral: \texttt{help.start()} 
+%\item Lorsque l'on conna\^{i}t le nom de la commande R: 
+%\item \mbox{\texttt{help(nom de la fonction)}} 
+\item \mbox{\texttt{?nom de la fonction}}
 \begin{itemize}
-\item exemple: \code{help(lm)}, \code{?table}
+\item exemple: \code{?lm}, \code{?table}
 \end{itemize}
-\item \`{A} partir des mot-cl\'{e}s: \texttt{??mot cl\'{e}}
-\begin{itemize}
-\item exemple: \code{??regression}
-\end{itemize}
-\item Toutes les commandes fournies par un package: \code{help(package=nom du package)}
-\begin{itemize}
-\item exemple: \code{help(package = datasets)}
-\end{itemize}
-\item F1 sur votre clavier 
+%\item \`{A} partir des mot-cl\'{e}s: \texttt{??mot cl\'{e}}
+%\begin{itemize}
+%\item exemple: \code{??regression}
+%\end{itemize}
+%\item Toutes les commandes fournies par un package: \code{help(package=nom du package)}
+%\begin{itemize}
+%\item exemple: \code{help(package = datasets)}
+%\end{itemize}
+%\item F1 sur votre clavier 
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Clavier Mac}
+%\begin{frame}{Clavier Mac}
+%\vspace{0.1in}
+%\begin{center}
+%\includegraphics[scale=0.40]{mackey.jpg}
+%\end{center}
+%\end{frame}
 
-\vspace{0.1in}
-
-\begin{center}
-\includegraphics[scale=0.40]{mackey.jpg}
-\end{center}
-
-\end{frame}
-
-
-
-\begin{frame}{Clavier PC}
-
-\vspace{0.1in}
-
-\begin{center}
-\includegraphics[scale=0.40]{pckey.jpg}
-\end{center}
-
-\end{frame}
+%\begin{frame}{Clavier PC}
+%\vspace{0.1in}
+%\begin{center}
+%\includegraphics[scale=0.40]{pckey.jpg}
+%\end{center}
+%\end{frame}
 
 
 
@@ -539,35 +574,65 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-2}\hfill{}\begin{alltt}
-\hlcom{# Basé sur les exemples de Vincent Goulet}
-\hlcom{# et de CRAN:}
-\hlcom{# https://cran.r-project.org/doc/manuals/R-intro.html}
-
+\begin{rcode}\begin{alltt}
 \hlcom{# Démarrer l'interface pour le documentation}
 \hlcom{# et naviguer les différentes resources}
 \hlkwd{help.start}\hlstd{()}
+
+\hlcom{# trouver l'aide pour la fonction rnorm}
+\hlopt{?}\hlstd{rnorm}
+
+\hlcom{# Connaitre le répertoire de travail}
+\hlkwd{getwd}\hlstd{()}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
 \end{frame}
 
+%\begin{frame}[fragile, plain]
+%<<rcode=TRUE, eval=FALSE>>=
+%@
+%\end{frame}
+
+
+
+
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-3}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
+\hlcom{# On additionne}
+\hlnum{39} \hlopt{+} \hlnum{3}
+
+\hlcom{# On soustrait}
+\hlnum{58} \hlopt{-} \hlnum{16}
+
+\hlcom{# On multiplie}
+\hlnum{6} \hlopt{*} \hlnum{7}
+
+\hlcom{# Et on peut même diviser}
+\hlnum{8} \hlopt{/} \hlnum{3}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+\end{frame}
+
+
+
+\begin{frame}[fragile, plain]
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
 \hlcom{# Générer deux vecteurs de nombres pseudo-aléatoires}
 \hlcom{# issus d’une loi normale centrée réduite.}
 \hlstd{x} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{50}\hlstd{)}
 \hlstd{y} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{50}\hlstd{)}
 
-\hlcom{# Graphique des couples (x, y).}
+\hlcom{# Graphique des couples (x, y)}
 \hlkwd{plot}\hlstd{(x, y)}
 
-\hlcom{# Graphique d’une approximation de la densité du }
-\hlcom{# vecteur x}
-\hlstd{dens.x} \hlkwb{<-} \hlkwd{density}\hlstd{(x)}
-\hlkwd{plot}\hlstd{(dens.x)}
+\hlcom{# Graphique d'un histogramme de x}
+\hlkwd{hist}\hlstd{(x)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -577,7 +642,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-4}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlcom{# voir la matière de x}
 \hlstd{x}
 
@@ -601,16 +666,16 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-5}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlcom{# Générer la suite 1, 2, ..., 20.}
 \hlstd{x} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{20}
 
 \hlcom{# créer un autre vecteur en fonction de x}
-\hlstd{w} \hlkwb{<-} \hlnum{1} \hlopt{+} \hlkwd{sqrt}\hlstd{(x)}\hlopt{/}\hlnum{2}
+\hlstd{y} \hlkwb{<-} \hlnum{2}\hlopt{*}\hlstd{x}\hlopt{+}\hlnum{3}
 
 \hlcom{# créer un data frame de deux colonnes et}
 \hlcom{# voir sa matière }
-\hlstd{dt} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{x} \hlstd{= x,} \hlkwc{y} \hlstd{= x} \hlopt{+} \hlkwd{rnorm}\hlstd{(x)}\hlopt{*}\hlstd{w)}
+\hlstd{dt} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(x, y)}
 \hlstd{dt}
 
 \hlcom{# estimer un modèle linéaire et voir les}
@@ -620,15 +685,13 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
-
-
 \end{frame}
 
-
+\begin{comment}
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-6}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlcom{# La fonction ’seq’ sert à générer des suites }
 \hlcom{# plus générales.}
 \hlkwd{seq}\hlstd{(}\hlkwc{from} \hlstd{=} \hlopt{-}\hlnum{5}\hlstd{,} \hlkwc{to} \hlstd{=} \hlnum{10}\hlstd{,} \hlkwc{by} \hlstd{=} \hlnum{3}\hlstd{)}
@@ -648,7 +711,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-7}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlcom{# Arithmétique vectorielle}
 \hlstd{v} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{12}  \hlcom{# initialisation d’un vecteur}
 \hlstd{v} \hlopt{+} \hlnum{2} \hlcom{# additionner 2 à chaque élément de v}
@@ -674,7 +737,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-8}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlcom{# trouver le répertoire où se trouve le}
 \hlcom{# jeux de donnés 'morley', qui est inclu avec}
 \hlcom{# l'installation de R}
@@ -694,6 +757,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{rcode}\end{kframe}
 \end{knitrout}
 \end{frame}
+\end{comment}
 \endgroup
 
 
@@ -714,11 +778,9 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \hspace*{-1.0cm}\parbox[t]{\textwidth}{
 \begin{block}{Objectifs du chapitre}
 \begin{enumerate}
-\item \'{E}crire et interpr\'{e}ter la syntaxe et la s\'{e}mantique du langage R.
-\item Identifier les principaux types de donn\'{e}es disponibles dans R.
-\item Utiliser les divers modes d’objets (en particulier \code{numeric, character} et \code{logical}) et la conversion automatique de l'un \`{a} l'autre.
-\item Cr\'{e}er et manipuler des vecteurs, matrices, tableaux, listes et data frames.
-\item Extraire des donn\'{e}es d'un objet ou y affecter de nouvelles valeurs \`{a} l'aide des diverses m\'{e}thodes d'indi\c{c}age.
+\item Identifier les principaux types d'objets dans R: \code{vector, matrix, data frame} et \code{list} 
+\item Cr\'{e}er et manipuler ces objets
+\item Extraire des donn\'{e}es d'un objet
 \end{enumerate}
 \end{block}
 }
@@ -745,7 +807,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-9}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlnum{2} \hlopt{+} \hlnum{3}
 \end{alltt}
 \begin{verbatim}
@@ -782,7 +844,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-10}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlstd{a} \hlkwb{<-} \hlnum{5}
 \hlstd{a}
 \end{alltt}
@@ -811,7 +873,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\label{unnamed-chunk-11}\hfill{}\begin{alltt}
+\begin{rcode}\begin{alltt}
 \hlstd{(a} \hlkwb{<-} \hlnum{2} \hlopt{+} \hlnum{3}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -827,6 +889,41 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{enumerate}
 
 \end{frame}
+
+
+\begin{frame}[fragile]{Conventions pour les noms d'objets}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Les caractères permis pour les noms d'objets: 
+\begin{enumerate}
+\item les lettres minuscules a–z 
+\item les lettres majuscules A–Z
+\item les chiffres 0–9, 
+\item le point .
+\item le caractère de soulignement \_
+\end{enumerate}
+\pause \item Il est permis d'utiliser des lettres accentuées, mais cette pratique est fortement découragée puisqu'elle risque de nuire à la portabilité du code
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Conventions pour les noms d'objets}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Le R est sensible à la casse, ce qui signifie que \code{foo, Foo et FOO} sont trois objets distincts
+\pause \item Certains noms sont utilisés par le système R. Mieux éviter d’utiliser 
+\begin{center}
+\code{c, q, t, C, D, I, diff, length, mean, pi, range, var, sd}\\
+\code{break, else, for, function, if, in, next, repeat, return, while}\\
+\code{TRUE, FALSE, T, F}\\
+\code{Inf, NA, NaN, NULL}
+\end{center}
+\end{itemize}
+
+\end{frame}
+
+
 
 
 
@@ -877,10 +974,36 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{frame}
 
 
+%\begin{frame}[<+->]{Les objets R}
+%\begin{itemize}
+%  \setlength\itemsep{2em}
+%\item Tout dans le langage R est un objet:
+%\begin{itemize}
+%\item les variables contenant des données
+%\item les fonctions, 
+%\item les opérateurs, même le symbole représentant le nom d’un
+%objet est lui-même un objet.
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
 
 
-\begin{frame}{Les structures de données en R}
-\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tout le contenu doit être du même type}\tnote[b]{le contenu peut être de différent types}
+
+
+\begin{frame}{Les objets R}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Les structures de données peuvent être organisées par: 
+\pause
+\begin{enumerate}
+\item leur dimension (1d, 2d, ou nd) 
+\item si elles sont homogène ou hétérogène
+\end{enumerate}
+\pause \item Cela donne lieu à 5 types de données les plus souvent utilisées dans l'analyse des données:
+\end{itemize}
+\pause 
+\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
 }{
     																\FL
 dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
@@ -890,6 +1013,263 @@ nd & & Array & &    \LL
 }
 
 \end{frame}
+
+
+\begin{frame}[fragile]{Atomic vectors}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item En R, à toutes fins pratiques, tout est un vecteur
+\pause \item Il n'y a pas de notion de scalaire en R ; un scalaire est simplement un vecteur de longueur 1
+\pause \item La fonction de base pour créer un vecteur est \code{c()}
+\end{itemize}
+\pause
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{5}\hlstd{)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1 2 5
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Atomic vectors}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Les quatre types d'atomic vectors les plus utilisés: 
+\begin{enumerate}
+\item double (également appelé numeric)
+\item integer
+\item character
+\item logical
+\end{enumerate}
+\end{itemize}
+\pause
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlstd{num.var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2.5}\hlstd{,} \hlnum{4.5}\hlstd{)} \hlcom{# numeric}
+\hlstd{int.var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1L}\hlstd{,} \hlnum{6L}\hlstd{,} \hlnum{10L}\hlstd{)} \hlcom{# integer}
+\hlstd{chr.var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"ceci sont"}\hlstd{,} \hlstr{"des characters"}\hlstd{)}
+\hlstd{log.var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{TRUE}\hlstd{,} \hlnum{FALSE}\hlstd{, T, F)} \hlcom{# logical}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Test}
+
+\begin{itemize}
+  %\setlength\itemsep{1em}
+\item \code{typeof()}: pour savoir quel type de vector
+\item \code{is.character(), is.double(), is.integer(), is.logical(), is.atomic()}: pour vérifier si c'est un cas spécifique 
+\end{itemize}
+\pause
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlstd{int_var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1L}\hlstd{,} \hlnum{6L}\hlstd{,} \hlnum{10L}\hlstd{)}
+\hlkwd{typeof}\hlstd{(int_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] "integer"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.integer}\hlstd{(int_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.atomic}\hlstd{(int_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Test}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlstd{dbl_var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2.5}\hlstd{,} \hlnum{4.5}\hlstd{)}
+\hlkwd{typeof}\hlstd{(dbl_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] "double"
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.double}\hlstd{(dbl_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\begin{alltt}
+\hlkwd{is.atomic}\hlstd{(dbl_var)}
+\end{alltt}
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Coercion}
+
+\begin{itemize}
+  \setlength\itemsep{1em}
+\item Tous les éléments d'un atomic vector doivent être du même type
+\pause \item Lorsque vous essayez de combiner différents types, ils seront convertis du type le plus flexible
+\pause \item Types de moins à plus flexible sont:
+\begin{enumerate}
+\item logical 
+\item integer 
+\item double 
+\item character
+\end{enumerate}
+\end{itemize}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlcom{# combiner un character et integer donne un character}
+\hlkwd{str}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"a"}\hlstd{,} \hlnum{1}\hlstd{))}
+\end{alltt}
+\begin{verbatim}
+##  chr [1:2] "a" "1"
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Coercion}
+\begin{itemize}
+\item La plusplart des opérations mathématiques vont convertir un atomic vector à un double ou integer
+\end{itemize}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlstd{x} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{FALSE}\hlstd{,} \hlnum{FALSE}\hlstd{,} \hlnum{TRUE}\hlstd{)}
+\hlkwd{as.numeric}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0 0 1
+\end{verbatim}
+\begin{alltt}
+\hlcom{# Nombre total de TRUE}
+\hlkwd{sum}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+\begin{alltt}
+\hlcom{# La proportion de TRUE}
+\hlkwd{mean}\hlstd{(x)}
+\end{alltt}
+\begin{verbatim}
+## [1] 0.33
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+\end{frame}
+
+
+\begin{frame}{Les objets R}
+
+\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
+}{
+    																\FL
+dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
+1d & & Atomic vector & & \textcolor{red}{\textbf{List}} \NN
+2d & & Matrix & & Data frame \NN
+nd & & Array & &    \LL
+}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{List}
+
+\begin{itemize}
+  %\setlength\itemsep{2em}
+\item Les lists sont différent des atomic vectors parce que leurs éléments peuvent \^{e}tre de tout type
+\item La fonction pour créer un list est \code{list()}
+\end{itemize}
+\pause
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlstd{(x} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{3}\hlstd{,} \hlstr{"a"}\hlstd{,} \hlkwd{c}\hlstd{(}\hlnum{TRUE}\hlstd{,} \hlnum{FALSE}\hlstd{,} \hlnum{TRUE}\hlstd{),} \hlkwd{c}\hlstd{(}\hlnum{2.3}\hlstd{,} \hlnum{5.9}\hlstd{)))}
+\end{alltt}
+\begin{verbatim}
+## [[1]]
+## [1] 1 2 3
+## 
+## [[2]]
+## [1] "a"
+## 
+## [[3]]
+## [1]  TRUE FALSE  TRUE
+## 
+## [[4]]
+## [1] 2.3 5.9
+\end{verbatim}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Attributs}
+
+\begin{itemize}
+  %\setlength\itemsep{2em}
+\item Les attributs d'un objet sont des éléments d'information additionnels liés à cet objet
+\item Pour chaque attribut, il existe une fonction du même nom servant à extraire l'attribut correspondant d’un objet
+\end{itemize}
+
+\ctable[caption={Attributs les plus usuels d'un objet},label=tab:table1,pos=h!,doinside=\small]{ccccc}{
+}{
+    																\FL
+Attribut	&  & Utilisation \ML
+class & & affecte le comportement d’un objet \\
+dim & & dimensions des matrices et tableaux \\
+dimnames & & étiquettes des dimensions des matrices et tableaux \\
+names & & étiquettes des éléments d’un objet\LL
+}
+
+
+
+\end{frame}
+
 
 
 
