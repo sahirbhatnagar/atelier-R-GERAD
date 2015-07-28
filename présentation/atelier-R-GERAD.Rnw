@@ -746,7 +746,321 @@ q()
 
 
 \begin{frame}{Définition et appel de fonctions}
-content...
+\begin{itemize}
+ \setlength\itemsep{2em}
+\item Plutôt que d'écrire beaucoup de lignes de code pour des choses assez simples et répétitives on fait appel à des \textbf{fonctions}
+\pause \item Une fonction est caractérisée par deux composantes:
+\pause \begin{enumerate}
+\normalsize
+\item son \textbf{nom}: c'est ce nom qui nous permettra d'appeler la fonction
+\pause \item une \textbf{liste d'arguments}: ce sont les informations dont la fonction a besoin pour travailler et renvoyer son résultat
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{La syntaxe pour appeler une fonction}
+\begin{itemize}
+ \setlength\itemsep{2em}
+\item Il faut écrire son nom suivi de parenthèses
+\pause \item Entre ces parenthèses, nous indiquerons les arguments dont la fonction a besoin:
+\begin{center}
+\code{nom\_de\_la\_fonction(arguments)}
+\end{center}
+\end{itemize}
+\pause 
+<<rcode=TRUE, tidy=FALSE, eval=FALSE>>=
+# chercher la rubrique d'aide pour racine carrée
+?sqrt
+
+# on voit que la fonction prend un argument
+sqrt(49)
+@
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Arguments facultatifs}
+\begin{itemize}
+ \setlength\itemsep{0.5em}
+\item Certaines fonctions nécessitent plusieurs arguments et certains de ces arguments sont optionnels (aussi possible d'avoir aucun argument: \code{getwd()}) 
+\pause \item Les arguments optionnels possèdent une valeur par défaut
+\pause \item Si on ne spécifie pas de valeur, ces arguments prendront la valeur définie par défaut, sinon ils prendront la valeur spécifié
+\end{itemize}
+\pause 
+
+<<rcode=TRUE, tidy=FALSE, eval=FALSE, size='footnotesize'>>=
+# chercher la rubrique d'aide pour logarithme
+?log
+
+# on précise pas de valeur pour le second argument
+log(2)
+
+# On peut spécifier le second argument en l'appelant par son nom
+log(2, base = exp(1))
+@
+
+\end{frame}
+
+
+
+
+\subsection{Les objets R}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Les objets R}}
+ \end{center}
+\end{frame}
+
+
+%\begin{frame}[<+->]{Les objets R}
+%\begin{itemize}
+%  \setlength\itemsep{2em}
+%\item Tout dans le langage R est un objet:
+%\begin{itemize}
+%\item les variables contenant des données
+%\item les fonctions, 
+%\item les opérateurs, même le symbole représentant le nom d’un
+%objet est lui-même un objet.
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
+
+
+
+
+\begin{frame}{Les objets R}
+
+%\begin{itemize}
+%  \setlength\itemsep{2em}
+%\item Les structures de données peuvent être organisées par: 
+%\pause
+%\begin{enumerate}
+%\item leur dimension (1d, 2d, ou nd) 
+%\item si elles sont homogène ou hétérogène
+%\end{enumerate}
+%\pause \item Cela donne lieu à 5 types de données les plus souvent utilisées %dans l'analyse des données:
+%\end{itemize}
+%\pause 
+\ctable[caption={Les principales objets en R et leurs nom de fonction},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
+}{
+    																\FL
+dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
+1d & & Atomic vector & & List \NN
+   & &    \code{c()} & & \code{list()} \ML
+2d & & Matrix & & Data frame \NN
+   & &  \code{matrix()} & & \code{data.frame()} \LL
+}
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Atomic vectors}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item En R, à toutes fins pratiques, tout est un vecteur
+\pause \item La fonction de base pour créer un vecteur est \code{c()} (concaténation)
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
+c(1, 2, 5)
+@
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Atomic vectors}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Les quatre types d'atomic vectors les plus utilisés: 
+\begin{enumerate}
+\item double (également appelé numeric)
+\item integer
+\item character
+\item logical
+\end{enumerate}
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+c(1, 2.5, 4.5) # numeric
+c(1L, 6L, 10L) # integer
+c("ceci sont", "des characters") #character
+c(TRUE, FALSE, T, F) # logical
+@
+
+\end{frame}
+
+
+
+
+
+
+\begin{comment}
+\begin{frame}[fragile]{Test}
+
+\begin{itemize}
+  %\setlength\itemsep{1em}
+\item \code{typeof()}: pour savoir quel type de vector
+\item \code{is.character(), is.double(), is.integer(), is.logical(), is.atomic()}: pour vérifier si c'est un cas spécifique 
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
+int_var <- c(1L, 6L, 10L)
+typeof(int_var)
+is.integer(int_var)
+is.atomic(int_var)
+@
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Test}
+
+<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
+dbl_var <- c(1, 2.5, 4.5)
+typeof(dbl_var)
+is.double(dbl_var)
+is.atomic(dbl_var)
+@
+
+\end{frame}
+\end{comment}
+
+
+\begin{frame}[fragile]{Coercion}
+
+\begin{itemize}
+  \setlength\itemsep{1em}
+\item Tous les éléments d'un atomic vector doivent être du même type
+\pause \item Lorsque vous essayez de combiner différents types, ils seront convertis du type le plus flexible
+\pause \item Types de moins à plus flexible sont:
+\begin{enumerate}
+\item logical 
+\item integer 
+\item double 
+\item character
+\end{enumerate}
+\end{itemize}
+<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
+# combiner un character et integer donne un character
+str(c("a", 1))
+@
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Coercion}
+\begin{itemize}
+\item La plusplart des opérations mathématiques vont convertir un atomic vector à un double ou integer
+\end{itemize}
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
+x <- c(FALSE, FALSE, TRUE)
+as.numeric(x)
+# Nombre total de TRUE
+sum(x)
+# La proportion de TRUE
+mean(x)
+@
+\end{frame}
+
+
+\begin{frame}[fragile]{List}
+
+\begin{itemize}
+  %\setlength\itemsep{2em}
+\item Les lists sont différent des atomic vectors parce que leurs éléments peuvent \^{e}tre de tout type
+\item La fonction pour créer un list est \code{list()}
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
+(x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9)))
+@
+
+\end{frame}
+
+
+
+\begin{comment}
+\begin{frame}[fragile]{Attributs}
+
+\begin{itemize}
+  %\setlength\itemsep{2em}
+\item Les attributs d'un objet sont des éléments d'information additionnels liés à cet objet
+\item Pour chaque attribut, il existe une fonction du même nom servant à extraire l'attribut correspondant d’un objet
+\end{itemize}
+
+\ctable[caption={Attributs les plus usuels d'un objet},label=tab:table1,pos=h!,doinside=\small]{ccccc}{
+}{
+    																\FL
+Attribut	&  & Utilisation \ML
+class & & affecte le comportement d’un objet \\
+dim & & dimensions des matrices et tableaux \\
+dimnames & & étiquettes des dimensions des matrices et tableaux \\
+names & & étiquettes des éléments d’un objet\LL
+}
+\end{frame}
+\end{comment}
+
+
+
+
+
+\begin{frame}[fragile]{Matrix}
+
+\begin{itemize}
+  \setlength\itemsep{1em}
+\item Les matrices ne sont rien d'autre que des vecteurs en 2 dimension
+\pause \item Surtout utilisés pour faire les calculs mathématiques (pensez à vos cours d'algèbre linéaire)
+\pause \item La fonction pour créer un matrix est \code{matrix()}
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
+# rempli par colonne par défaut
+matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+@
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Matrix}
+
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
+# automatiquement converti en données homogène
+matrix(c(1,2,3,"a","b","c"), nrow = 2, ncol = 3)
+@
+
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]{Data frame}
+
+\begin{itemize}
+  \setlength\itemsep{0.5em}
+\item Le data frame est un tableaux de données hétérogènes
+\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
+\pause \item La fonction pour créer un data frame est \code{data.frame()}
+\end{itemize}
+\pause
+<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
+# une colonne 'id' pour identifier les sujets
+# une colonne 'age' pour leur age
+data.frame(id = c("didier","patrice","laurent"),
+           age = c(37,34,32))
+@
+
 \end{frame}
 
 
@@ -759,41 +1073,6 @@ content...
   \Huge{\textcolor{red}{Commandes R}}
  \end{center}
 \end{frame}
-
-
-
-\begin{frame}{Commandes de bases}
- %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
-\begin{tikzpicture}
-\node (expr) [startstop] {\code{sessionInfo()}
-\code{install.packages()}
-\code{library()}\textcolor{pinkish}{texxxx}
-\code{setwd()}\textcolor{pinkish}{teccc}
-\code{getwd()}\textcolor{pinkish}{teccc}
-\code{rm()}\textcolor{pinkish}{tevvvvvvv}
-\mbox{\code{ls()}\textcolor{pinkish}{tevvvvvvv}}  };
-\node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{c()}
-\code{data.frame()}
-\code{matrix()}
-\code{list()}};
-\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.0cm] {\code{load()}
-\code{read.table()}
-\code{source()}};
-\draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2cm] 
-{\footnotesize Espace de travail};
-\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3cm] 
-{\footnotesize Objets R les plus utilisés};
-\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
-{\footnotesize Accesser les données et scripts R};
-\end{tikzpicture}
-%}
-\end{frame}
-
-
-
 
 
 \begin{frame}[fragile]{Expression et affectation} 
@@ -883,105 +1162,149 @@ b
 
 
 
+\begin{frame}[fragile]{Indi\c{c}age d'un vector}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item L'indiçage sert principalement à deux choses
+\pause \begin{enumerate}
+\normalsize
+\item extraire des éléments 
+\item les remplacer
+\end{enumerate}
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# création d'un vecteur
+x <- c(a = -1, b = 2, c = 8, d = 10) 
+
+# extraction par position
+x[1]
+
+# extraction par étiquette
+x["c"]
+
+# remplacer le deuxième élément par 5
+x[2] <- 5
+@
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Indi\c{c}age d'un data frame et matrix}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item L'indexation des observations se fait à partir des rangés et colonnes du data frame et matrix:
+\begin{center}
+\code{d[rangé,colonne]}
+\end{center}
+
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# création d'un data frame
+d <- data.frame(Noms = c("Pierre", "Jean", "Jacques"),
+Age = c(42, 34, 19),
+Fumeur = c(TRUE, TRUE, FALSE))
+
+d[1, ] # première rangé
+
+d[ ,1] # première colonne 
+
+d[3,2] # troisième rangé, deuxième colonne
+@
+\end{frame}
 
 
 
 
+\begin{frame}[fragile]{Indi\c{c}age d'un list}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# crétion d'un list
+x <- list(joueur = c("V", "C"),
+		  score = c(10, 12))
+		  
+# premier élément de la liste
+x[[1]]
+
+# 1er élément du 2e élément
+x[[2]][1]
+@
+\end{frame}
+
+
+\begin{frame}[fragile]{Importer des donnés}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item La commande \code{read.table()} permet d'importer sous R des données stockées dans un format proche de celui du data frame (2 dimensions)
+\pause \item Chaque valeur est séparée par un espace
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+DF <- read.table("bodyfat.csv")
+@
+\end{frame}
 
 
 
 
+\begin{frame}[fragile]{Installer des packages additionnels}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item Il existe tout un écosystème de commandes additionnelles, regroupées par thème dans ce que l'on appelle des \textbf{packages}. 
+\item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# installer des packages pour créer des rapports
+# reproductibles
+install.packages(c("knitr","rmarkdown"))
+@
+\end{frame}
 
 
-
-\subsection{Les objets R}
+\subsection{Sommaire}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Les objets R}}
+  \Huge{\textcolor{red}{Sommaire}}
  \end{center}
 \end{frame}
 
 
-%\begin{frame}[<+->]{Les objets R}
-%\begin{itemize}
-%  \setlength\itemsep{2em}
-%\item Tout dans le langage R est un objet:
-%\begin{itemize}
-%\item les variables contenant des données
-%\item les fonctions, 
-%\item les opérateurs, même le symbole représentant le nom d’un
-%objet est lui-même un objet.
-%\end{itemize}
-%\end{itemize}
-%\end{frame}
 
 
-
-
-\begin{frame}{Les objets R}
-
-\begin{itemize}
-  \setlength\itemsep{2em}
-\item Les structures de données peuvent être organisées par: 
-\pause
-\begin{enumerate}
-\item leur dimension (1d, 2d, ou nd) 
-\item si elles sont homogène ou hétérogène
-\end{enumerate}
-\pause \item Cela donne lieu à 5 types de données les plus souvent utilisées dans l'analyse des données:
-\end{itemize}
-\pause 
-\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
-}{
-    																\FL
-dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
-1d & & Atomic vector & & List \NN
-2d & & Matrix & & Data frame \NN
-nd & & Array & &    \LL
-}
-
-\end{frame}
-
-
-\begin{frame}[fragile]{Atomic vectors}
-
-\begin{itemize}
-  \setlength\itemsep{2em}
-\item En R, à toutes fins pratiques, tout est un vecteur
-\pause \item Il n'y a pas de notion de scalaire en R ; un scalaire est simplement un vecteur de longueur 1
-\pause \item La fonction de base pour créer un vecteur est \code{c()}
-\end{itemize}
-\pause
-<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
-c(1, 2, 5)
-@
-
-\end{frame}
-
-
-
-
-\begin{frame}[fragile]{Atomic vectors}
-
-\begin{itemize}
-  \setlength\itemsep{2em}
-\item Les quatre types d'atomic vectors les plus utilisés: 
-\begin{enumerate}
-\item double (également appelé numeric)
-\item integer
-\item character
-\item logical
-\end{enumerate}
-\end{itemize}
-\pause
-<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-num.var <- c(1, 2.5, 4.5) # numeric
-int.var <- c(1L, 6L, 10L) # integer
-chr.var <- c("ceci sont", "des characters")
-log.var <- c(TRUE, FALSE, T, F) # logical
-@
-
+\begin{frame}{Sommaire des commandes de bases}
+ %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
+\begin{tikzpicture}
+\node (expr) [startstop] {\code{sessionInfo()}
+\code{install.packages()}
+\code{library()}\textcolor{pinkish}{texxxx}
+\code{setwd()}\textcolor{pinkish}{teccc}
+\code{getwd()}\textcolor{pinkish}{teccc}
+\code{rm()}\textcolor{pinkish}{tevvvvvvv}
+\mbox{\code{ls()}\textcolor{pinkish}{tevvvvvvv}}  };
+\node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{c()}
+\code{data.frame()}
+\code{matrix()}
+\code{list()}};
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.0cm] {\code{load()}
+\code{read.table()}
+\code{source()}};
+\draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2cm] 
+{\footnotesize Espace de travail};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3cm] 
+{\footnotesize Objets R les plus utilisés};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
+{\footnotesize Accesser les données et scripts R};
+\end{tikzpicture}
+%}
 \end{frame}
 
 
@@ -990,128 +1313,7 @@ log.var <- c(TRUE, FALSE, T, F) # logical
 
 
 
-\begin{frame}[fragile]{Test}
 
-\begin{itemize}
-  %\setlength\itemsep{1em}
-\item \code{typeof()}: pour savoir quel type de vector
-\item \code{is.character(), is.double(), is.integer(), is.logical(), is.atomic()}: pour vérifier si c'est un cas spécifique 
-\end{itemize}
-\pause
-<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
-int_var <- c(1L, 6L, 10L)
-typeof(int_var)
-is.integer(int_var)
-is.atomic(int_var)
-@
-
-\end{frame}
-
-
-
-\begin{frame}[fragile]{Test}
-
-<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
-dbl_var <- c(1, 2.5, 4.5)
-typeof(dbl_var)
-is.double(dbl_var)
-is.atomic(dbl_var)
-@
-
-\end{frame}
-
-
-
-\begin{frame}[fragile]{Coercion}
-
-\begin{itemize}
-  \setlength\itemsep{1em}
-\item Tous les éléments d'un atomic vector doivent être du même type
-\pause \item Lorsque vous essayez de combiner différents types, ils seront convertis du type le plus flexible
-\pause \item Types de moins à plus flexible sont:
-\begin{enumerate}
-\item logical 
-\item integer 
-\item double 
-\item character
-\end{enumerate}
-\end{itemize}
-<<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
-# combiner un character et integer donne un character
-str(c("a", 1))
-@
-\end{frame}
-
-
-
-\begin{frame}[fragile]{Coercion}
-\begin{itemize}
-\item La plusplart des opérations mathématiques vont convertir un atomic vector à un double ou integer
-\end{itemize}
-<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
-x <- c(FALSE, FALSE, TRUE)
-as.numeric(x)
-# Nombre total de TRUE
-sum(x)
-# La proportion de TRUE
-mean(x)
-@
-\end{frame}
-
-
-\begin{frame}{Les objets R}
-
-\ctable[caption={Les structures de données en R},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
-}{
-    																\FL
-dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
-1d & & Atomic vector & & \textcolor{red}{\textbf{List}} \NN
-2d & & Matrix & & Data frame \NN
-nd & & Array & &    \LL
-}
-
-\end{frame}
-
-
-
-\begin{frame}[fragile]{List}
-
-\begin{itemize}
-  %\setlength\itemsep{2em}
-\item Les lists sont différent des atomic vectors parce que leurs éléments peuvent \^{e}tre de tout type
-\item La fonction pour créer un list est \code{list()}
-\end{itemize}
-\pause
-<<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
-(x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9)))
-@
-
-\end{frame}
-
-
-
-
-\begin{frame}[fragile]{Attributs}
-
-\begin{itemize}
-  %\setlength\itemsep{2em}
-\item Les attributs d'un objet sont des éléments d'information additionnels liés à cet objet
-\item Pour chaque attribut, il existe une fonction du même nom servant à extraire l'attribut correspondant d’un objet
-\end{itemize}
-
-\ctable[caption={Attributs les plus usuels d'un objet},label=tab:table1,pos=h!,doinside=\small]{ccccc}{
-}{
-    																\FL
-Attribut	&  & Utilisation \ML
-class & & affecte le comportement d’un objet \\
-dim & & dimensions des matrices et tableaux \\
-dimnames & & étiquettes des dimensions des matrices et tableaux \\
-names & & étiquettes des éléments d’un objet\LL
-}
-
-
-
-\end{frame}
 
 
 

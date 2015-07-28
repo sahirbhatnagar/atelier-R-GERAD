@@ -53,6 +53,7 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 * [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Introduction au langage R et &agrave; RStudio](http://www.aliquote.org/cours/misc/mooc/labs.pdf)
+* [Lots de packages regroup&eacute;s par domaine](https://cran.r-project.org/web/views/)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [Chercher des librairies](http://www.r-pkg.org/)
 * [Advanced R](http://adv-r.had.co.nz/)

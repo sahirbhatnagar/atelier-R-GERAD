@@ -75,70 +75,86 @@
 \headcommand {\beamer@framepages {43}{43}}
 \headcommand {\slideentry {2}{0}{8}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{45}{Commandes R}}\headcommand {\beamer@subsectionpages {43}{44}}
-\headcommand {\slideentry {2}{1}{1}{45/45}{Commandes R}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{45}{Les fonctions}}\headcommand {\beamer@subsectionpages {43}{44}}
+\headcommand {\slideentry {2}{1}{1}{45/45}{Les fonctions}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {2}{1}{2}{46/47}{Commandes R}{0}}
-\headcommand {\beamer@framepages {46}{47}}
-\headcommand {\slideentry {2}{1}{3}{48/49}{Commandes R}{0}}
-\headcommand {\beamer@framepages {48}{49}}
-\headcommand {\slideentry {2}{1}{4}{50/52}{Commandes R}{0}}
+\headcommand {\slideentry {2}{1}{2}{46/49}{Les fonctions}{0}}
+\headcommand {\beamer@framepages {46}{49}}
+\headcommand {\slideentry {2}{1}{3}{50/52}{Les fonctions}{0}}
 \headcommand {\beamer@framepages {50}{52}}
-\headcommand {\slideentry {2}{1}{5}{53/54}{Commandes R}{0}}
-\headcommand {\beamer@framepages {53}{54}}
-\headcommand {\slideentry {2}{1}{6}{55/56}{Commandes R}{0}}
-\headcommand {\beamer@framepages {55}{56}}
-\headcommand {\slideentry {2}{1}{7}{57/57}{Commandes R}{0}}
+\headcommand {\slideentry {2}{1}{4}{53/56}{Les fonctions}{0}}
+\headcommand {\beamer@framepages {53}{56}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{57}{Les objets R}}\headcommand {\beamer@subsectionpages {45}{56}}
+\headcommand {\slideentry {2}{2}{1}{57/57}{Les objets R}{0}}
 \headcommand {\beamer@framepages {57}{57}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{58}{Les objets R}}\headcommand {\beamer@subsectionpages {45}{57}}
-\headcommand {\slideentry {2}{2}{1}{58/58}{Les objets R}{0}}
+\headcommand {\slideentry {2}{2}{2}{58/58}{Les objets R}{0}}
 \headcommand {\beamer@framepages {58}{58}}
-\headcommand {\slideentry {2}{2}{2}{59/62}{Les objets R}{0}}
-\headcommand {\beamer@framepages {59}{62}}
-\headcommand {\slideentry {2}{2}{3}{63/66}{Les objets R}{0}}
-\headcommand {\beamer@framepages {63}{66}}
-\headcommand {\slideentry {2}{2}{4}{67/68}{Les objets R}{0}}
-\headcommand {\beamer@framepages {67}{68}}
-\headcommand {\slideentry {2}{2}{5}{69/70}{Les objets R}{0}}
-\headcommand {\beamer@framepages {69}{70}}
-\headcommand {\slideentry {2}{2}{6}{71/71}{Les objets R}{0}}
-\headcommand {\beamer@framepages {71}{71}}
-\headcommand {\slideentry {2}{2}{7}{72/74}{Les objets R}{0}}
-\headcommand {\beamer@framepages {72}{74}}
-\headcommand {\slideentry {2}{2}{8}{75/75}{Les objets R}{0}}
-\headcommand {\beamer@framepages {75}{75}}
-\headcommand {\slideentry {2}{2}{9}{76/76}{Les objets R}{0}}
-\headcommand {\beamer@framepages {76}{76}}
-\headcommand {\slideentry {2}{2}{10}{77/78}{Les objets R}{0}}
-\headcommand {\beamer@framepages {77}{78}}
-\headcommand {\slideentry {2}{2}{11}{79/79}{Les objets R}{0}}
+\headcommand {\slideentry {2}{2}{3}{59/61}{Les objets R}{0}}
+\headcommand {\beamer@framepages {59}{61}}
+\headcommand {\slideentry {2}{2}{4}{62/63}{Les objets R}{0}}
+\headcommand {\beamer@framepages {62}{63}}
+\headcommand {\slideentry {2}{2}{5}{64/66}{Les objets R}{0}}
+\headcommand {\beamer@framepages {64}{66}}
+\headcommand {\slideentry {2}{2}{6}{67/67}{Les objets R}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {2}{2}{7}{68/69}{Les objets R}{0}}
+\headcommand {\beamer@framepages {68}{69}}
+\headcommand {\slideentry {2}{2}{8}{70/73}{Les objets R}{0}}
+\headcommand {\beamer@framepages {70}{73}}
+\headcommand {\slideentry {2}{2}{9}{74/74}{Les objets R}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\slideentry {2}{2}{10}{75/78}{Les objets R}{0}}
+\headcommand {\beamer@framepages {75}{78}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{79}{Commandes R}}\headcommand {\beamer@subsectionpages {57}{78}}
+\headcommand {\slideentry {2}{3}{1}{79/79}{Commandes R}{0}}
 \headcommand {\beamer@framepages {79}{79}}
-\headcommand {\sectionentry {3}{3. Graphiques}{80}{3. Graphiques}{0}}
-\headcommand {\beamer@sectionpages {43}{79}}
-\headcommand {\beamer@subsectionpages {58}{79}}
-\headcommand {\slideentry {3}{0}{12}{80/80}{}{0}}
-\headcommand {\beamer@framepages {80}{80}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{81}{Les objets R}}\headcommand {\beamer@subsectionpages {80}{80}}
-\headcommand {\slideentry {3}{1}{1}{81/81}{Les objets R}{0}}
-\headcommand {\beamer@framepages {81}{81}}
-\headcommand {\sectionentry {4}{4. Statistiques}{82}{4. Statistiques}{0}}
-\headcommand {\beamer@sectionpages {80}{81}}
-\headcommand {\beamer@subsectionpages {81}{81}}
-\headcommand {\slideentry {4}{0}{2}{82/82}{}{0}}
-\headcommand {\beamer@framepages {82}{82}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{83}{Les objets R}}\headcommand {\beamer@subsectionpages {82}{82}}
-\headcommand {\slideentry {4}{1}{1}{83/83}{Les objets R}{0}}
-\headcommand {\beamer@framepages {83}{83}}
-\headcommand {\sectionentry {5}{5. Cr\'{e}er des rapports reproductibles}{84}{5. Cr\'{e}er des rapports reproductibles}{0}}
-\headcommand {\beamer@sectionpages {82}{83}}
-\headcommand {\beamer@subsectionpages {83}{83}}
-\headcommand {\slideentry {5}{0}{2}{84/84}{}{0}}
-\headcommand {\beamer@framepages {84}{84}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{85}{Les objets R}}\headcommand {\beamer@subsectionpages {84}{84}}
-\headcommand {\slideentry {5}{1}{1}{85/85}{Les objets R}{0}}
-\headcommand {\beamer@framepages {85}{85}}
-\headcommand {\beamer@partpages {1}{85}}
-\headcommand {\beamer@subsectionpages {85}{85}}
-\headcommand {\beamer@sectionpages {84}{85}}
-\headcommand {\beamer@documentpages {85}}
-\headcommand {\def \inserttotalframenumber {57}}
+\headcommand {\slideentry {2}{3}{2}{80/81}{Commandes R}{0}}
+\headcommand {\beamer@framepages {80}{81}}
+\headcommand {\slideentry {2}{3}{3}{82/83}{Commandes R}{0}}
+\headcommand {\beamer@framepages {82}{83}}
+\headcommand {\slideentry {2}{3}{4}{84/86}{Commandes R}{0}}
+\headcommand {\beamer@framepages {84}{86}}
+\headcommand {\slideentry {2}{3}{5}{87/89}{Commandes R}{0}}
+\headcommand {\beamer@framepages {87}{89}}
+\headcommand {\slideentry {2}{3}{6}{90/90}{Commandes R}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\slideentry {2}{3}{7}{91/91}{Commandes R}{0}}
+\headcommand {\beamer@framepages {91}{91}}
+\headcommand {\slideentry {2}{3}{8}{92/93}{Commandes R}{0}}
+\headcommand {\beamer@framepages {92}{93}}
+\headcommand {\slideentry {2}{3}{9}{94/94}{Commandes R}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{95}{Sommaire}}\headcommand {\beamer@subsectionpages {79}{94}}
+\headcommand {\slideentry {2}{4}{1}{95/95}{Sommaire}{0}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\slideentry {2}{4}{2}{96/96}{Sommaire}{0}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\sectionentry {3}{3. Graphiques}{97}{3. Graphiques}{0}}
+\headcommand {\beamer@sectionpages {43}{96}}
+\headcommand {\beamer@subsectionpages {95}{96}}
+\headcommand {\slideentry {3}{0}{3}{97/97}{}{0}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{98}{Les objets R}}\headcommand {\beamer@subsectionpages {97}{97}}
+\headcommand {\slideentry {3}{1}{1}{98/98}{Les objets R}{0}}
+\headcommand {\beamer@framepages {98}{98}}
+\headcommand {\sectionentry {4}{4. Statistiques}{99}{4. Statistiques}{0}}
+\headcommand {\beamer@sectionpages {97}{98}}
+\headcommand {\beamer@subsectionpages {98}{98}}
+\headcommand {\slideentry {4}{0}{2}{99/99}{}{0}}
+\headcommand {\beamer@framepages {99}{99}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{100}{Les objets R}}\headcommand {\beamer@subsectionpages {99}{99}}
+\headcommand {\slideentry {4}{1}{1}{100/100}{Les objets R}{0}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\sectionentry {5}{5. Cr\'{e}er des rapports reproductibles}{101}{5. Cr\'{e}er des rapports reproductibles}{0}}
+\headcommand {\beamer@sectionpages {99}{100}}
+\headcommand {\beamer@subsectionpages {100}{100}}
+\headcommand {\slideentry {5}{0}{2}{101/101}{}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{102}{Les objets R}}\headcommand {\beamer@subsectionpages {101}{101}}
+\headcommand {\slideentry {5}{1}{1}{102/102}{Les objets R}{0}}
+\headcommand {\beamer@framepages {102}{102}}
+\headcommand {\beamer@partpages {1}{102}}
+\headcommand {\beamer@subsectionpages {102}{102}}
+\headcommand {\beamer@sectionpages {101}{102}}
+\headcommand {\beamer@documentpages {102}}
+\headcommand {\def \inserttotalframenumber {64}}

@@ -1,20 +1,17 @@
-\frametitle{Attributs}
+\frametitle{Installer des packages additionnels}
 
 \begin{itemize}
-  %\setlength\itemsep{2em}
-\item Les attributs d'un objet sont des éléments d'information additionnels liés à cet objet
-\item Pour chaque attribut, il existe une fonction du même nom servant à extraire l'attribut correspondant d’un objet
+  \setlength\itemsep{2em}
+\item Il existe tout un écosystème de commandes additionnelles, regroupées par thème dans ce que l'on appelle des \textbf{packages}.
+\item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
 
-\ctable[caption={Attributs les plus usuels d'un objet},label=tab:table1,pos=h!,doinside=\small]{ccccc}{
-}{
-     \FL
-Attribut &  & Utilisation \ML
-class & & affecte le comportement d’un objet \\
-dim & & dimensions des matrices et tableaux \\
-dimnames & & étiquettes des dimensions des matrices et tableaux \\
-names & & étiquettes des éléments d’un objet\LL
-}
-
-
-
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\begin{alltt}
+\hlcom{# installer des packages pour créer des rapports}
+\hlcom{# reproductibles}
+\hlkwd{install.packages}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"knitr"}\hlstd{,}\hlstr{"rmarkdown"}\hlstd{))}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
