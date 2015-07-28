@@ -54,6 +54,10 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 * [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [Chercher des librairies](http://www.r-pkg.org/)
+* [Advanced R](http://adv-r.had.co.nz/)
+
+* [What is an R-Project?](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+
 * [CRAN Reproducible Research Task View](http://cran.r-project.org/web/views/ReproducibleResearch.html)
 * [knitr chunk options](http://yihui.name/knitr/options/)
 * [Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/KnitrHowto)
@@ -62,7 +66,7 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 * [knitr showcase](http://yihui.name/knitr/demo/showcase/)
 * [Karl Broman's Tools for RR](http://kbroman.org/Tools4RR/)
 * [Editors for knitr](http://yihui.name/knitr/demo/editors/)
-* [What is an R-Project?](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+
 
 
 ----

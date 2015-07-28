@@ -52,21 +52,17 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 ### Site Internet
 
 * [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
+* [Introduction au langage R et &agrave; RStudio](http://www.aliquote.org/cours/misc/mooc/labs.pdf)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [Chercher des librairies](http://www.r-pkg.org/)
 * [Advanced R](http://adv-r.had.co.nz/)
-
 * [What is an R-Project?](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
-
-* [CRAN Reproducible Research Task View](http://cran.r-project.org/web/views/ReproducibleResearch.html)
-* [knitr chunk options](http://yihui.name/knitr/options/)
-* [Vanderbilt University](http://biostat.mc.vanderbilt.edu/wiki/Main/KnitrHowto)
-* [Jennifer Bryan (UBC)](https://github.com/jennybc/2015-02-23_bryan-fields-talk)
-* [Data Science with R by Graham Williams](http://handsondatascience.com/KnitRO.pdf)
-* [knitr showcase](http://yihui.name/knitr/demo/showcase/)
-* [Karl Broman's Tools for RR](http://kbroman.org/Tools4RR/)
-* [Editors for knitr](http://yihui.name/knitr/demo/editors/)
-
+* [Stackoverflow](http://stackoverflow.com/questions/tagged/r)
+* [R Documentation](http://www.rdocumentation.org/)
+* [R Bloggers](http://www.r-bloggers.com/)
+* [Twitter #rstats](https://twitter.com/search?q=\%23rstats)
+* [Montréal UseR Group](http://www.meetup.com/Montreal-R-User-Group/)
+* [International UseR Groups](http://blog.revolutionanalytics.com/local-r-groups.html)
 
 
 ----
