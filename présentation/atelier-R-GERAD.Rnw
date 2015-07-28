@@ -7,7 +7,7 @@
 \usepackage{comment}
 \usepackage{ctable}
 \usepackage{amsmath,amsthm,amssymb}
-\newtheorem{rcode}{R Code}[section]
+\newtheorem{rcode}{R code}[section]
 \usepackage{url}
 
 %\usepackage[usenames]{xcolor}
@@ -96,6 +96,7 @@
 \newcommand{\highcode}[1]{\textcolor{highlight}{\texttt{#1}}}
 
 \setbeamercolor{block body}{bg=beige}
+\setbeamertemplate{theorems}[numbered] % so that you can number the R code theorem environments
 
 %\setbeamercovered{highly dynamic}
 
@@ -128,7 +129,7 @@ options(width=78, digits = 2)
 knit_hooks$set(rcode=function(before, options, envir)
 {
 if (before)
-sprintf('\\begin{rcode}', options$label)
+sprintf('\\begin{rcode}\\label{%s}', options$label)
 else
 '\\end{rcode}'
 })
@@ -411,7 +412,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}{Langage de programmation orientée objet}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Ca te permet de facilement trouver et ré-utiliser les résultats de tes analyses
+\item Ca permet de facilement trouver et ré-utiliser les résultats de tes analyses
 \pause \item Une fonction peut complété plusieurs t\^{a}ches
 \end{itemize}
 \end{frame}
@@ -421,7 +422,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{itemize}
   \setlength\itemsep{2em}
 \item Langage de programmation interpr\'{e}t\'{e} (versus \code{C}, \code{C++}, \code{JAVA})
-\item Moin compliqué qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
+\item Plus accessible qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
 \pause \item Le programme qu'on lance pour utiliser R est l'interpr\`{e}te
 \pause \item Celui-ci prend des commandes en R, qu'il ex\`{e}cutera imm\'{e}diatement
 \pause \item  Autre exemple: \code{Python}
@@ -438,7 +439,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \item \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/}
 \end{itemize} 
 \item Facilement voir le code des autres avec GitHub 
-\begin{itemize}
+\begin{itemize}Moin compliqué
 \item \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
 \end{itemize}
 \item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet  
@@ -488,16 +489,13 @@ c(1,2,3) + c(4,5,6)
 
 
 
-\begin{frame}{O\`{u} trouver de l'aide pour une fonction}
+\begin{frame}[fragile]{O\`{u} trouver de l'aide pour une fonction}
 \begin{itemize}
   \setlength\itemsep{2em}
 %\item Pour l'aide g\'{e}n\'{e}ral: \texttt{help.start()} 
 %\item Lorsque l'on conna\^{i}t le nom de la commande R: 
 %\item \mbox{\texttt{help(nom de la fonction)}} 
-\item \mbox{\texttt{?nom de la fonction}}
-\begin{itemize}
-\item exemple: \code{?lm}, \code{?table}
-\end{itemize}
+\item \mbox{\texttt{?nom\_de\_la\_fonction}}
 %\item \`{A} partir des mot-cl\'{e}s: \texttt{??mot cl\'{e}}
 %\begin{itemize}
 %\item exemple: \code{??regression}
@@ -507,6 +505,21 @@ c(1,2,3) + c(4,5,6)
 %\item exemple: \code{help(package = datasets)}
 %\end{itemize}
 %\item F1 sur votre clavier 
+\end{itemize}
+
+\pause 
+<<rcode=TRUE, eval=FALSE>>=
+# l'aide pour la fonction de régression linéaire 'lm'
+?lm
+@
+\end{frame}
+
+
+\begin{frame}{La rubrique d'aide}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item \textbf{Usage:} le nom de la fonction, tous ses arguments, et les valeurs par défaut
+\pause \item \textbf{Value:} le type d'objet retourné par la fonction
 \end{itemize}
 \end{frame}
 
@@ -547,7 +560,7 @@ c(1,2,3) + c(4,5,6)
 \setlength{\hoffset}{-.5\beamer@sidebarwidth}
 \makeatother
 \begin{frame}[fragile, plain]
-<<rcode=TRUE, eval=FALSE>>=
+<<label, rcode=TRUE, eval=FALSE>>=
 # Démarrer l'interface pour le documentation
 # et naviguer les différentes resources
 help.start()
@@ -642,6 +655,9 @@ summary(fit)
 @
 \end{frame}
 
+\endgroup
+
+
 \begin{comment}
 \begin{frame}[fragile, plain]
 <<rcode=TRUE, eval=FALSE>>=
@@ -701,7 +717,7 @@ q()
 @
 \end{frame}
 \end{comment}
-\endgroup
+
 
 
 
@@ -724,7 +740,8 @@ q()
 \item Comprendre ce qui est un fonction et comment l'utiliser
 \item Identifier les principaux types d'objets dans R: \code{vector, matrix, data frame} et \code{list} 
 \item Cr\'{e}er et manipuler ces objets
-\item Extraire des donn\'{e}es d'un objet
+\item Importer des fichiers \code{txt} et \code{csv}
+\item Installer un package
 \end{enumerate}
 \end{block}
 }
@@ -750,7 +767,8 @@ q()
  \setlength\itemsep{2em}
 \item Plutôt que d'écrire beaucoup de lignes de code pour des choses assez simples et répétitives on fait appel à des \textbf{fonctions}
 \pause \item Une fonction est caractérisée par deux composantes:
-\pause \begin{enumerate}
+\pause 
+\begin{enumerate}
 \normalsize
 \item son \textbf{nom}: c'est ce nom qui nous permettra d'appeler la fonction
 \pause \item une \textbf{liste d'arguments}: ce sont les informations dont la fonction a besoin pour travailler et renvoyer son résultat
@@ -961,7 +979,7 @@ str(c("a", 1))
 
 \begin{frame}[fragile]{Coercion}
 \begin{itemize}
-\item La plusplart des opérations mathématiques vont convertir un atomic vector à un double ou integer
+\item La pluspart des opérations mathématiques vont convertir un atomic vector à un double ou integer
 \end{itemize}
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
 x <- c(FALSE, FALSE, TRUE)
@@ -1050,7 +1068,7 @@ matrix(c(1,2,3,"a","b","c"), nrow = 2, ncol = 3)
 \begin{itemize}
   \setlength\itemsep{0.5em}
 \item Le data frame est un tableaux de données hétérogènes
-\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
+%\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
 \pause \item La fonction pour créer un data frame est \code{data.frame()}
 \end{itemize}
 \pause
@@ -1108,7 +1126,7 @@ b
 
 \end{frame}
 
-
+\begin{comment}
 \begin{frame}[fragile]{Expression et affectation} 
 \begin{enumerate}
 \conti
@@ -1123,8 +1141,9 @@ b
 \end{itemize}
 
 \end{enumerate}
-
 \end{frame}
+\end{comment}
+
 
 \begin{comment}
 \begin{frame}[fragile]{Conventions pour les noms d'objets}
@@ -1162,10 +1181,10 @@ b
 
 
 
-\begin{frame}[fragile]{Indi\c{c}age d'un vector}
+\begin{frame}[fragile]{Indexation d'un vector}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item L'indiçage sert principalement à deux choses
+\item L'indexation sert principalement à deux choses
 \pause \begin{enumerate}
 \normalsize
 \item extraire des éléments 
@@ -1221,40 +1240,93 @@ d[3,2] # troisième rangé, deuxième colonne
 \begin{frame}[fragile]{Indi\c{c}age d'un list}
 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-# crétion d'un list
+# création d'un list
 x <- list(joueur = c("V", "C"),
 		  score = c(10, 12))
 		  
 # premier élément de la liste
 x[[1]]
 
-# 1er élément du 2e élément
+# 1er élément du 2e élément de la list
 x[[2]][1]
 @
 \end{frame}
 
 
-\begin{frame}[fragile]{Importer des donnés}
+\begin{frame}[fragile]{Importer et enregistrer des donnés et du code}
 
+
+
+\ctable[caption={Les fonctions de bases pour importer et enregistrer des donnés et du code R},label=tab:table1,pos=h!,doinside=\small]{lccc}{\tnote{chaque valeur est séparée par un espace}\tnote[b]{chaque valeur est séparée par une virgule}\tnote[c]{objets dans ton espace de travail (Environment)}
+}{
+    																\FL
+        	  & fichiers	           &	 objets\tmark[c]  &    script R\ML
+importer  & \code{read.table()\tmark} &       \code{load()} &   \code{source()}    \NN
+          &  \code{read.csv()\tmark[b]}  &                 &                 \ML
+enregistrer  & \code{write.table()} &  \code{save()} &   File -> Save As..         \NN
+             & \code{write.csv()}   &    \LL
+} 
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Importer des donnés}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item La commande \code{read.table()} permet d'importer sous R des données stockées dans un format proche de celui du data frame (2 dimensions)
-\pause \item Chaque valeur est séparée par un espace
+\item Il est nécessaire de préciser le chemin d'accès au fichier s'il n'est pas dans le répertoire de travail
+\begin{itemize}
+\normalsize
+\pause \item \code{getwd()}: conna\^{i}tre le répertoire de travail
+\pause \item \code{setwd()}: modifier le répertoire de travail
 \end{itemize}
-
+\end{itemize}
+\pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-DF <- read.table("bodyfat.csv")
+# modifier le répertoire de travail
+setwd("~/git_repositories/atelier-R-GERAD/data")
+
+# importer les fichiers
+# affectation aux objets 'lung' et 'admit'
+lung <- read.csv("lung.csv")
+
+admit <- read.table("admit.txt")
 @
 \end{frame}
 
 
 
 
-\begin{frame}[fragile]{Installer des packages additionnels}
+\begin{frame}[fragile]{Importer du code R à partir d'un script}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE, size = 'small'>>=
+# modifier le répertoire de travail
+setwd("~/git_repositories/atelier-R-GERAD/script")
+
+# exécute les commandes R du script 'mtcars.R'
+# et montre le output
+source("mtcars.R", echo = TRUE)
+
+# sauvegarde les objets du environment
+save(df, fit, file = "mtcars.RData")
+
+# supprime les objets de ton environment
+rm(df, fit)
+
+# importer les objets R de 'mtcars.RData'
+load("mtcars.RData")
+@
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Installer de packages additionnels dans R}
 
 \begin{itemize}
-  \setlength\itemsep{2em}
-\item Il existe tout un écosystème de commandes additionnelles, regroupées par thème dans ce que l'on appelle des \textbf{packages}. 
+  \setlength\itemsep{1em}
+\item Un \textbf{package} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
+système ou d'en ajouter de nouvelles
 \item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
 
@@ -1262,6 +1334,10 @@ DF <- read.table("bodyfat.csv")
 # installer des packages pour créer des rapports
 # reproductibles
 install.packages(c("knitr","rmarkdown"))
+
+# pour avoir accès aux fonctions dans ces packages
+library(knitr)
+library(rmarkdown)
 @
 \end{frame}
 
@@ -1291,14 +1367,17 @@ install.packages(c("knitr","rmarkdown"))
 \code{data.frame()}
 \code{matrix()}
 \code{list()}};
-\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.0cm] {\code{load()}
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {
 \code{read.table()}
+\code{write.table()}
+\code{load()}
+\code{save()}\textcolor{beige}{text}
 \code{source()}};
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2cm] 
 {\footnotesize Espace de travail};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-2.6cm] 
 {\footnotesize Objets R les plus utilisés};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
@@ -1306,15 +1385,6 @@ install.packages(c("knitr","rmarkdown"))
 \end{tikzpicture}
 %}
 \end{frame}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1330,13 +1400,58 @@ install.packages(c("knitr","rmarkdown"))
  }
 \end{frame}
 
+%\begin{comment}
+\setbeamercolor{normal text}{fg=black,bg=background}
+\begin{frame}[plain]
+\hspace*{-1.0cm}\parbox[t]{\textwidth}{
+\begin{block}{Objectifs du chapitre}
+\begin{enumerate}
+\item Comprendre la syntaxe de la fonction \code{plot}
+\item Créer des \code{boxplot, histogram} et \code{density} plot
+\item Comment sauvegarder des graphiques
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+
+
+
 \setbeamercolor{normal text}{fg=gray,bg=white}
-\subsection{Les objets R}
+\subsection{La fonction plot}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Les objets R}}
+  \Huge{\textcolor{red}{La fonction \code{plot}}}
  \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Introduction aux graphiques en R}
+\begin{itemize}
+  \setlength\itemsep{2em}
+  \item R offre une variété de graphiques remarquable 
+  \item Pour avoir une petite idée des possibilités offertes, il suffit de taper la commande \code{demo(graphics)} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{La fonction}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item La fonction \code{plot} peut prendre plusieurs arguments et types d'objets
+\end{itemize}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# Scatter plot des valeurs d'un vecteur contre leurs indices
+# équivalent à plot(mtcars[,"mpg"])
+plot(mtcars$mpg) 
+
+# Graphique des couples (x, y)
+plot(mtcars$mpg, mtcars$disp)
+@
+
 \end{frame}
 
 
@@ -1385,7 +1500,12 @@ install.packages(c("knitr","rmarkdown"))
 \end{frame}
 
 
+\begin{frame}[fragile]{Session Information}
+<<results='asis', eval = TRUE, echo = FALSE, size='footnotesize'>>=
+toLatex(sessionInfo(),locale = FALSE)
+@
 
+\end{frame}
 
 
 

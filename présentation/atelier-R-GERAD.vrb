@@ -1,17 +1,16 @@
-\frametitle{Installer des packages additionnels}
-
-\begin{itemize}
-  \setlength\itemsep{2em}
-\item Il existe tout un écosystème de commandes additionnelles, regroupées par thème dans ce que l'on appelle des \textbf{packages}.
-\item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
+\frametitle{Session Information}
+\begin{itemize}\raggedright
+  \item R version 3.2.1 (2015-06-18), \verb|x86_64-pc-linux-gnu|
+  \item Base packages: base, datasets, graphics, grDevices, methods,
+    stats, utils
+  \item Other packages: data.table~1.9.4, dplyr~0.4.1, ggplot2~1.0.1,
+    knitr~1.10.5, xtable~1.7-4
+  \item Loaded via a namespace (and not attached): assertthat~0.1,
+    chron~2.3-45, colorspace~1.2-6, DBI~0.3.1, digest~0.6.8,
+    evaluate~0.7, formatR~1.2, grid~3.2.1, gtable~0.1.2, highr~0.5,
+    magrittr~1.5, MASS~7.3-43, munsell~0.4.2, parallel~3.2.1,
+    plyr~1.8.3, proto~0.3-10, Rcpp~0.11.6, reshape2~1.4.1,
+    scales~0.2.5, stringi~0.5-5, stringr~1.0.0, tools~3.2.1
 \end{itemize}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
-\hlcom{# installer des packages pour créer des rapports}
-\hlcom{# reproductibles}
-\hlkwd{install.packages}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"knitr"}\hlstd{,}\hlstr{"rmarkdown"}\hlstd{))}
-\end{alltt}
-\end{rcode}\end{kframe}
-\end{knitrout}
+

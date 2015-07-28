@@ -45,6 +45,8 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 ### Livres
 
 * [Introduction &agrave; la programmation en R](https://cran.r-project.org/doc/contrib/Goulet_introduction_programmation_R.pdf)
+* [R pour les d&eacute;butants](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr.pdf)
+* [Advanced R](http://adv-r.had.co.nz/)
 * [Reproducible research with R and RStudio](http://www.amazon.com/exec/obidos/ASIN/1466572841/7210-20)
 * [Dynamic documents with R and knitr](http://www.amazon.com/exec/obidos/ASIN/1482203537/7210-20)
 
@@ -56,7 +58,6 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 * [Lots de packages regroup&eacute;s par domaine](https://cran.r-project.org/web/views/)
 * [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [Chercher des librairies](http://www.r-pkg.org/)
-* [Advanced R](http://adv-r.had.co.nz/)
 * [What is an R-Project?](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
 * [Stackoverflow](http://stackoverflow.com/questions/tagged/r)
 * [R Documentation](http://www.rdocumentation.org/)

@@ -56,7 +56,7 @@
 \usepackage{comment}
 \usepackage{ctable}
 \usepackage{amsmath,amsthm,amssymb}
-\newtheorem{rcode}{R Code}[section]
+\newtheorem{rcode}{R code}[section]
 \usepackage{url}
 
 %\usepackage[usenames]{xcolor}
@@ -145,6 +145,7 @@
 \newcommand{\highcode}[1]{\textcolor{highlight}{\texttt{#1}}}
 
 \setbeamercolor{block body}{bg=beige}
+\setbeamertemplate{theorems}[numbered] % so that you can number the R code theorem environments
 
 %\setbeamercovered{highly dynamic}
 
@@ -429,7 +430,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}{Langage de programmation orientée objet}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Ca te permet de facilement trouver et ré-utiliser les résultats de tes analyses
+\item Ca permet de facilement trouver et ré-utiliser les résultats de tes analyses
 \pause \item Une fonction peut complété plusieurs t\^{a}ches
 \end{itemize}
 \end{frame}
@@ -439,7 +440,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{itemize}
   \setlength\itemsep{2em}
 \item Langage de programmation interpr\'{e}t\'{e} (versus \code{C}, \code{C++}, \code{JAVA})
-\item Moin compliqué qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
+\item Plus accessible qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
 \pause \item Le programme qu'on lance pour utiliser R est l'interpr\`{e}te
 \pause \item Celui-ci prend des commandes en R, qu'il ex\`{e}cutera imm\'{e}diatement
 \pause \item  Autre exemple: \code{Python}
@@ -456,7 +457,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \item \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/}
 \end{itemize} 
 \item Facilement voir le code des autres avec GitHub 
-\begin{itemize}
+\begin{itemize}Moin compliqué
 \item \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
 \end{itemize}
 \item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet  
@@ -491,7 +492,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-1}\begin{alltt}
 \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{)} \hlopt{+} \hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,}\hlnum{5}\hlstd{,}\hlnum{6}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -513,16 +514,13 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 
 
-\begin{frame}{O\`{u} trouver de l'aide pour une fonction}
+\begin{frame}[fragile]{O\`{u} trouver de l'aide pour une fonction}
 \begin{itemize}
   \setlength\itemsep{2em}
 %\item Pour l'aide g\'{e}n\'{e}ral: \texttt{help.start()} 
 %\item Lorsque l'on conna\^{i}t le nom de la commande R: 
 %\item \mbox{\texttt{help(nom de la fonction)}} 
-\item \mbox{\texttt{?nom de la fonction}}
-\begin{itemize}
-\item exemple: \code{?lm}, \code{?table}
-\end{itemize}
+\item \mbox{\texttt{?nom\_de\_la\_fonction}}
 %\item \`{A} partir des mot-cl\'{e}s: \texttt{??mot cl\'{e}}
 %\begin{itemize}
 %\item exemple: \code{??regression}
@@ -532,6 +530,25 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 %\item exemple: \code{help(package = datasets)}
 %\end{itemize}
 %\item F1 sur votre clavier 
+\end{itemize}
+
+\pause 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-2}\begin{alltt}
+\hlcom{# l'aide pour la fonction de régression linéaire 'lm'}
+\hlopt{?}\hlstd{lm}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+\end{frame}
+
+
+\begin{frame}{La rubrique d'aide}
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item \textbf{Usage:} le nom de la fonction, tous ses arguments, et les valeurs par défaut
+\pause \item \textbf{Value:} le type d'objet retourné par la fonction
 \end{itemize}
 \end{frame}
 
@@ -574,7 +591,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{label}\begin{alltt}
 \hlcom{# Démarrer l'interface pour le documentation}
 \hlcom{# et naviguer les différentes resources}
 \hlkwd{help.start}\hlstd{()}
@@ -600,7 +617,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-3}\begin{alltt}
 \hlcom{# On additionne}
 \hlnum{39} \hlopt{+} \hlnum{3}
 
@@ -622,7 +639,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-4}\begin{alltt}
 \hlcom{# Générer deux vecteurs de nombres pseudo-aléatoires}
 \hlcom{# issus d’une loi normale centrée réduite.}
 \hlstd{x} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(}\hlnum{50}\hlstd{)}
@@ -642,7 +659,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-5}\begin{alltt}
 \hlcom{# voir la matière de x}
 \hlstd{x}
 
@@ -666,7 +683,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-6}\begin{alltt}
 \hlcom{# Générer la suite 1, 2, ..., 20.}
 \hlstd{x} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{20}
 
@@ -687,11 +704,14 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{knitrout}
 \end{frame}
 
+\endgroup
+
+
 \begin{comment}
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-7}\begin{alltt}
 \hlcom{# La fonction ’seq’ sert à générer des suites }
 \hlcom{# plus générales.}
 \hlkwd{seq}\hlstd{(}\hlkwc{from} \hlstd{=} \hlopt{-}\hlnum{5}\hlstd{,} \hlkwc{to} \hlstd{=} \hlnum{10}\hlstd{,} \hlkwc{by} \hlstd{=} \hlnum{3}\hlstd{)}
@@ -711,7 +731,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-8}\begin{alltt}
 \hlcom{# Arithmétique vectorielle}
 \hlstd{v} \hlkwb{<-} \hlnum{1}\hlopt{:}\hlnum{12}  \hlcom{# initialisation d’un vecteur}
 \hlstd{v} \hlopt{+} \hlnum{2} \hlcom{# additionner 2 à chaque élément de v}
@@ -737,7 +757,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}[fragile, plain]
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-9}\begin{alltt}
 \hlcom{# trouver le répertoire où se trouve le}
 \hlcom{# jeux de donnés 'morley', qui est inclu avec}
 \hlcom{# l'installation de R}
@@ -758,7 +778,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \end{knitrout}
 \end{frame}
 \end{comment}
-\endgroup
+
 
 
 
@@ -781,7 +801,8 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \item Comprendre ce qui est un fonction et comment l'utiliser
 \item Identifier les principaux types d'objets dans R: \code{vector, matrix, data frame} et \code{list} 
 \item Cr\'{e}er et manipuler ces objets
-\item Extraire des donn\'{e}es d'un objet
+\item Importer des fichiers \code{txt} et \code{csv}
+\item Installer un package
 \end{enumerate}
 \end{block}
 }
@@ -807,7 +828,8 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
  \setlength\itemsep{2em}
 \item Plutôt que d'écrire beaucoup de lignes de code pour des choses assez simples et répétitives on fait appel à des \textbf{fonctions}
 \pause \item Une fonction est caractérisée par deux composantes:
-\pause \begin{enumerate}
+\pause 
+\begin{enumerate}
 \normalsize
 \item son \textbf{nom}: c'est ce nom qui nous permettra d'appeler la fonction
 \pause \item une \textbf{liste d'arguments}: ce sont les informations dont la fonction a besoin pour travailler et renvoyer son résultat
@@ -831,7 +853,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-10}\begin{alltt}
 \hlcom{# chercher la rubrique d'aide pour racine carrée}
 \hlopt{?}\hlstd{sqrt}
 
@@ -856,7 +878,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-11}\begin{alltt}
 \hlcom{# chercher la rubrique d'aide pour logarithme}
 \hlopt{?}\hlstd{log}
 
@@ -935,7 +957,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-12}\begin{alltt}
 \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2}\hlstd{,} \hlnum{5}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -964,7 +986,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-13}\begin{alltt}
 \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2.5}\hlstd{,} \hlnum{4.5}\hlstd{)} \hlcom{# numeric}
 \hlkwd{c}\hlstd{(}\hlnum{1L}\hlstd{,} \hlnum{6L}\hlstd{,} \hlnum{10L}\hlstd{)} \hlcom{# integer}
 \hlkwd{c}\hlstd{(}\hlstr{"ceci sont"}\hlstd{,} \hlstr{"des characters"}\hlstd{)} \hlcom{#character}
@@ -991,7 +1013,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \pause
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-14}\begin{alltt}
 \hlstd{int_var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1L}\hlstd{,} \hlnum{6L}\hlstd{,} \hlnum{10L}\hlstd{)}
 \hlkwd{typeof}\hlstd{(int_var)}
 \end{alltt}
@@ -1021,7 +1043,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-15}\begin{alltt}
 \hlstd{dbl_var} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,} \hlnum{2.5}\hlstd{,} \hlnum{4.5}\hlstd{)}
 \hlkwd{typeof}\hlstd{(dbl_var)}
 \end{alltt}
@@ -1063,7 +1085,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \end{itemize}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-16}\begin{alltt}
 \hlcom{# combiner un character et integer donne un character}
 \hlkwd{str}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"a"}\hlstd{,} \hlnum{1}\hlstd{))}
 \end{alltt}
@@ -1078,11 +1100,11 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 
 \begin{frame}[fragile]{Coercion}
 \begin{itemize}
-\item La plusplart des opérations mathématiques vont convertir un atomic vector à un double ou integer
+\item La pluspart des opérations mathématiques vont convertir un atomic vector à un double ou integer
 \end{itemize}
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-17}\begin{alltt}
 \hlstd{x} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{FALSE}\hlstd{,} \hlnum{FALSE}\hlstd{,} \hlnum{TRUE}\hlstd{)}
 \hlkwd{as.numeric}\hlstd{(x)}
 \end{alltt}
@@ -1118,7 +1140,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \pause
 \begin{knitrout}\footnotesize
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-18}\begin{alltt}
 \hlstd{(x} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{3}\hlstd{,} \hlstr{"a"}\hlstd{,} \hlkwd{c}\hlstd{(}\hlnum{TRUE}\hlstd{,} \hlnum{FALSE}\hlstd{,} \hlnum{TRUE}\hlstd{),} \hlkwd{c}\hlstd{(}\hlnum{2.3}\hlstd{,} \hlnum{5.9}\hlstd{)))}
 \end{alltt}
 \begin{verbatim}
@@ -1177,7 +1199,7 @@ names & & étiquettes des éléments d’un objet\LL
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-19}\begin{alltt}
 \hlcom{# rempli par colonne par défaut}
 \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{,}\hlnum{4}\hlstd{,}\hlnum{5}\hlstd{,}\hlnum{6}\hlstd{),} \hlkwc{nrow} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{ncol} \hlstd{=} \hlnum{3}\hlstd{)}
 \end{alltt}
@@ -1196,7 +1218,7 @@ names & & étiquettes des éléments d’un objet\LL
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-20}\begin{alltt}
 \hlcom{# automatiquement converti en données homogène}
 \hlkwd{matrix}\hlstd{(}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{,}\hlstr{"a"}\hlstd{,}\hlstr{"b"}\hlstd{,}\hlstr{"c"}\hlstd{),} \hlkwc{nrow} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{ncol} \hlstd{=} \hlnum{3}\hlstd{)}
 \end{alltt}
@@ -1219,13 +1241,13 @@ names & & étiquettes des éléments d’un objet\LL
 \begin{itemize}
   \setlength\itemsep{0.5em}
 \item Le data frame est un tableaux de données hétérogènes
-\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
+%\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
 \pause \item La fonction pour créer un data frame est \code{data.frame()}
 \end{itemize}
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-21}\begin{alltt}
 \hlcom{# une colonne 'id' pour identifier les sujets}
 \hlcom{# une colonne 'age' pour leur age}
 \hlkwd{data.frame}\hlstd{(}\hlkwc{id} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"didier"}\hlstd{,}\hlstr{"patrice"}\hlstd{,}\hlstr{"laurent"}\hlstd{),}
@@ -1260,7 +1282,7 @@ names & & étiquettes des éléments d’un objet\LL
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-22}\begin{alltt}
 \hlnum{2} \hlopt{+} \hlnum{3}
 \end{alltt}
 \begin{verbatim}
@@ -1297,7 +1319,7 @@ names & & étiquettes des éléments d’un objet\LL
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-23}\begin{alltt}
 \hlstd{a} \hlkwb{<-} \hlnum{5}
 \hlstd{a}
 \end{alltt}
@@ -1318,7 +1340,7 @@ names & & étiquettes des éléments d’un objet\LL
 
 \end{frame}
 
-
+\begin{comment}
 \begin{frame}[fragile]{Expression et affectation} 
 \begin{enumerate}
 \conti
@@ -1326,7 +1348,7 @@ names & & étiquettes des éléments d’un objet\LL
 \pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-24}\begin{alltt}
 \hlstd{(a} \hlkwb{<-} \hlnum{2} \hlopt{+} \hlnum{3}\hlstd{)}
 \end{alltt}
 \begin{verbatim}
@@ -1340,8 +1362,9 @@ names & & étiquettes des éléments d’un objet\LL
 \end{itemize}
 
 \end{enumerate}
-
 \end{frame}
+\end{comment}
+
 
 \begin{comment}
 \begin{frame}[fragile]{Conventions pour les noms d'objets}
@@ -1379,10 +1402,10 @@ names & & étiquettes des éléments d’un objet\LL
 
 
 
-\begin{frame}[fragile]{Indi\c{c}age d'un vector}
+\begin{frame}[fragile]{Indexation d'un vector}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item L'indiçage sert principalement à deux choses
+\item L'indexation sert principalement à deux choses
 \pause \begin{enumerate}
 \normalsize
 \item extraire des éléments 
@@ -1392,7 +1415,7 @@ names & & étiquettes des éléments d’un objet\LL
 \pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-25}\begin{alltt}
 \hlcom{# création d'un vecteur}
 \hlstd{x} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlkwc{a} \hlstd{=} \hlopt{-}\hlnum{1}\hlstd{,} \hlkwc{b} \hlstd{=} \hlnum{2}\hlstd{,} \hlkwc{c} \hlstd{=} \hlnum{8}\hlstd{,} \hlkwc{d} \hlstd{=} \hlnum{10}\hlstd{)}
 
@@ -1424,7 +1447,7 @@ names & & étiquettes des éléments d’un objet\LL
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-26}\begin{alltt}
 \hlcom{# création d'un data frame}
 \hlstd{d} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{Noms} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"Pierre"}\hlstd{,} \hlstr{"Jean"}\hlstd{,} \hlstr{"Jacques"}\hlstd{),}
 \hlkwc{Age} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{42}\hlstd{,} \hlnum{34}\hlstd{,} \hlnum{19}\hlstd{),}
@@ -1447,15 +1470,15 @@ names & & étiquettes des éléments d’un objet\LL
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
-\hlcom{# crétion d'un list}
+\begin{rcode}\label{unnamed-chunk-27}\begin{alltt}
+\hlcom{# création d'un list}
 \hlstd{x} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlkwc{joueur} \hlstd{=} \hlkwd{c}\hlstd{(}\hlstr{"V"}\hlstd{,} \hlstr{"C"}\hlstd{),}
                   \hlkwc{score} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{10}\hlstd{,} \hlnum{12}\hlstd{))}
 
 \hlcom{# premier élément de la liste}
 \hlstd{x[[}\hlnum{1}\hlstd{]]}
 
-\hlcom{# 1er élément du 2e élément}
+\hlcom{# 1er élément du 2e élément de la list}
 \hlstd{x[[}\hlnum{2}\hlstd{]][}\hlnum{1}\hlstd{]}
 \end{alltt}
 \end{rcode}\end{kframe}
@@ -1463,18 +1486,46 @@ names & & étiquettes des éléments d’un objet\LL
 \end{frame}
 
 
-\begin{frame}[fragile]{Importer des donnés}
+\begin{frame}[fragile]{Importer et enregistrer des donnés et du code}
 
+
+
+\ctable[caption={Les fonctions de bases pour importer et enregistrer des donnés et du code R},label=tab:table1,pos=h!,doinside=\small]{lccc}{\tnote{chaque valeur est séparée par un espace}\tnote[b]{chaque valeur est séparée par une virgule}\tnote[c]{objets dans ton espace de travail (Environment)}
+}{
+    																\FL
+        	  & fichiers	           &	 objets\tmark[c]  &    script R\ML
+importer  & \code{read.table()\tmark} &       \code{load()} &   \code{source()}    \NN
+          &  \code{read.csv()\tmark[b]}  &                 &                 \ML
+enregistrer  & \code{write.table()} &  \code{save()} &   File -> Save As..         \NN
+             & \code{write.csv()}   &    \LL
+} 
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Importer des donnés}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item La commande \code{read.table()} permet d'importer sous R des données stockées dans un format proche de celui du data frame (2 dimensions)
-\pause \item Chaque valeur est séparée par un espace
+\item Il est nécessaire de préciser le chemin d'accès au fichier s'il n'est pas dans le répertoire de travail
+\begin{itemize}
+\normalsize
+\pause \item \code{getwd()}: conna\^{i}tre le répertoire de travail
+\pause \item \code{setwd()}: modifier le répertoire de travail
 \end{itemize}
-
+\end{itemize}
+\pause 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
-\hlstd{DF} \hlkwb{<-} \hlkwd{read.table}\hlstd{(}\hlstr{"bodyfat.csv"}\hlstd{)}
+\begin{rcode}\label{unnamed-chunk-28}\begin{alltt}
+\hlcom{# modifier le répertoire de travail}
+\hlkwd{setwd}\hlstd{(}\hlstr{"~/git_repositories/atelier-R-GERAD/data"}\hlstd{)}
+
+\hlcom{# importer les fichiers}
+\hlcom{# affectation aux objets 'lung' et 'admit'}
+\hlstd{lung} \hlkwb{<-} \hlkwd{read.csv}\hlstd{(}\hlstr{"lung.csv"}\hlstd{)}
+
+\hlstd{admit} \hlkwb{<-} \hlkwd{read.table}\hlstd{(}\hlstr{"admit.txt"}\hlstd{)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -1483,20 +1534,53 @@ names & & étiquettes des éléments d’un objet\LL
 
 
 
-\begin{frame}[fragile]{Installer des packages additionnels}
+\begin{frame}[fragile]{Importer du code R à partir d'un script}
+
+\begin{knitrout}\small
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-29}\begin{alltt}
+\hlcom{# modifier le répertoire de travail}
+\hlkwd{setwd}\hlstd{(}\hlstr{"~/git_repositories/atelier-R-GERAD/script"}\hlstd{)}
+
+\hlcom{# exécute les commandes R du script 'mtcars.R'}
+\hlcom{# et montre le output}
+\hlkwd{source}\hlstd{(}\hlstr{"mtcars.R"}\hlstd{,} \hlkwc{echo} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+
+\hlcom{# sauvegarde les objets du environment}
+\hlkwd{save}\hlstd{(df, fit,} \hlkwc{file} \hlstd{=} \hlstr{"mtcars.RData"}\hlstd{)}
+
+\hlcom{# supprime les objets de ton environment}
+\hlkwd{rm}\hlstd{(df, fit)}
+
+\hlcom{# importer les objets R de 'mtcars.RData'}
+\hlkwd{load}\hlstd{(}\hlstr{"mtcars.RData"}\hlstd{)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Installer de packages additionnels dans R}
 
 \begin{itemize}
-  \setlength\itemsep{2em}
-\item Il existe tout un écosystème de commandes additionnelles, regroupées par thème dans ce que l'on appelle des \textbf{packages}. 
+  \setlength\itemsep{1em}
+\item Un \textbf{package} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
+système ou d'en ajouter de nouvelles
 \item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
-\begin{rcode}\begin{alltt}
+\begin{rcode}\label{unnamed-chunk-30}\begin{alltt}
 \hlcom{# installer des packages pour créer des rapports}
 \hlcom{# reproductibles}
 \hlkwd{install.packages}\hlstd{(}\hlkwd{c}\hlstd{(}\hlstr{"knitr"}\hlstd{,}\hlstr{"rmarkdown"}\hlstd{))}
+
+\hlcom{# pour avoir accès aux fonctions dans ces packages}
+\hlkwd{library}\hlstd{(knitr)}
+\hlkwd{library}\hlstd{(rmarkdown)}
 \end{alltt}
 \end{rcode}\end{kframe}
 \end{knitrout}
@@ -1528,14 +1612,17 @@ names & & étiquettes des éléments d’un objet\LL
 \code{data.frame()}
 \code{matrix()}
 \code{list()}};
-\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.0cm] {\code{load()}
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {
 \code{read.table()}
+\code{write.table()}
+\code{load()}
+\code{save()}\textcolor{beige}{text}
 \code{source()}};
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2cm] 
 {\footnotesize Espace de travail};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-2.6cm] 
 {\footnotesize Objets R les plus utilisés};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
@@ -1543,15 +1630,6 @@ names & & étiquettes des éléments d’un objet\LL
 \end{tikzpicture}
 %}
 \end{frame}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1567,13 +1645,62 @@ names & & étiquettes des éléments d’un objet\LL
  }
 \end{frame}
 
+%\begin{comment}
+\setbeamercolor{normal text}{fg=black,bg=background}
+\begin{frame}[plain]
+\hspace*{-1.0cm}\parbox[t]{\textwidth}{
+\begin{block}{Objectifs du chapitre}
+\begin{enumerate}
+\item Comprendre la syntaxe de la fonction \code{plot}
+\item Créer des \code{boxplot, histogram} et \code{density} plot
+\item Comment sauvegarder des graphiques
+\end{enumerate}
+\end{block}
+}
+\end{frame}
+
+
+
 \setbeamercolor{normal text}{fg=gray,bg=white}
-\subsection{Les objets R}
+\subsection{La fonction plot}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Les objets R}}
+  \Huge{\textcolor{red}{La fonction \code{plot}}}
  \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Introduction aux graphiques en R}
+\begin{itemize}
+  \setlength\itemsep{2em}
+  \item R offre une variété de graphiques remarquable 
+  \item Pour avoir une petite idée des possibilités offertes, il suffit de taper la commande \code{demo(graphics)} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{La fonction}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item La fonction \code{plot} peut prendre plusieurs arguments et types d'objets
+\end{itemize}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
+\begin{rcode}\label{unnamed-chunk-31}\begin{alltt}
+\hlcom{# Scatter plot des valeurs d'un vecteur contre leurs indices}
+\hlcom{# équivalent à plot(mtcars[,"mpg"])}
+\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg)}
+
+\hlcom{# Graphique des couples (x, y)}
+\hlkwd{plot}\hlstd{(mtcars}\hlopt{$}\hlstd{mpg, mtcars}\hlopt{$}\hlstd{disp)}
+\end{alltt}
+\end{rcode}\end{kframe}
+\end{knitrout}
+
 \end{frame}
 
 
@@ -1622,7 +1749,23 @@ names & & étiquettes des éléments d’un objet\LL
 \end{frame}
 
 
+\begin{frame}[fragile]{Session Information}
+\begin{itemize}\raggedright
+  \item R version 3.2.1 (2015-06-18), \verb|x86_64-pc-linux-gnu|
+  \item Base packages: base, datasets, graphics, grDevices, methods,
+    stats, utils
+  \item Other packages: data.table~1.9.4, dplyr~0.4.1, ggplot2~1.0.1,
+    knitr~1.10.5, xtable~1.7-4
+  \item Loaded via a namespace (and not attached): assertthat~0.1,
+    chron~2.3-45, colorspace~1.2-6, DBI~0.3.1, digest~0.6.8,
+    evaluate~0.7, formatR~1.2, grid~3.2.1, gtable~0.1.2, highr~0.5,
+    magrittr~1.5, MASS~7.3-43, munsell~0.4.2, parallel~3.2.1,
+    plyr~1.8.3, proto~0.3-10, Rcpp~0.11.6, reshape2~1.4.1,
+    scales~0.2.5, stringi~0.5-5, stringr~1.0.0, tools~3.2.1
+\end{itemize}
 
+
+\end{frame}
 
 
 
