@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.2)  28 JUL 2015 16:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.2)  28 JUL 2015 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1566,19 +1566,19 @@ LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textbullet' on input line 206.
 
-<gerad.png, id=92, 277.035pt x 125.46875pt>
+<gerad.png, id=122, 277.035pt x 125.46875pt>
 File: gerad.png Graphic file (type png)
  <use gerad.png>
 Package pdftex.def Info: gerad.png used on input line 206.
 (pdftex.def)             Requested size: 78.50076pt x 35.55219pt.
 
-<udem.png, id=93, 159.59625pt x 66.2475pt>
+<udem.png, id=123, 159.59625pt x 66.2475pt>
 File: udem.png Graphic file (type png)
  <use udem.png>
 Package pdftex.def Info: udem.png used on input line 206.
 (pdftex.def)             Requested size: 78.50076pt x 32.58487pt.
 
-<hec.png, id=94, 279.0425pt x 44.165pt>
+<hec.png, id=124, 279.0425pt x 44.165pt>
 File: hec.png Graphic file (type png)
  <use hec.png>
 Package pdftex.def Info: hec.png used on input line 206.
@@ -1591,38 +1591,36 @@ Package pdftex.def Info: hec.png used on input line 206.
 
 ] [5
 
-] <rstudio.png, id=166, 922.44624pt x 314.17375pt>
+]
+<rstudio.png, id=216, 922.44624pt x 314.17375pt>
 File: rstudio.png Graphic file (type png)
-
-<use rstudio.png>
+ <use rstudio.png>
 Package pdftex.def Info: rstudio.png used on input line 226.
 (pdftex.def)             Requested size: 290.74263pt x 99.02277pt.
- <rlogo.png, id=167, 122.4575pt x 97.36375pt>
+
+<rlogo.png, id=217, 122.4575pt x 97.36375pt>
 File: rlogo.png Graphic file (type png)
  <use rlogo.png>
 Package pdftex.def Info: rlogo.png used on input line 226.
 (pdftex.def)             Requested size: 58.14763pt x 46.2319pt.
+ [6
 
-[6
-
- <./rstudio.png> <./rlogo.png>] <goulet.png, id=187, 774.895pt x 780.9175pt>
+ <./rstudio.png> <./rlogo.png>] <goulet.png, id=242, 774.895pt x 780.9175pt>
 File: goulet.png Graphic file (type png)
-
-<use goulet.png>
+ <use goulet.png>
 Package pdftex.def Info: goulet.png used on input line 248.
 (pdftex.def)             Requested size: 104.66702pt x 105.47888pt.
- <had.jpg, id=188, 100.4553pt x 156.1032pt>
+
+<had.jpg, id=243, 100.4553pt x 156.1032pt>
 File: had.jpg Graphic file (type jpg)
  <use had.jpg>
 Package pdftex.def Info: had.jpg used on input line 248.
 (pdftex.def)             Requested size: 78.50076pt x 121.98865pt.
+ [7
 
-[7
-
- <./goulet.png> <./had.jpg>] <introR.jpg, id=207, 632.3625pt x 420.57124pt>
+ <./goulet.png> <./had.jpg>] <introR.jpg, id=267, 632.3625pt x 420.57124pt>
 File: introR.jpg Graphic file (type jpg)
-
-<use introR.jpg>
+ <use introR.jpg>
 Package pdftex.def Info: introR.jpg used on input line 257.
 (pdftex.def)             Requested size: 322.50061pt x 214.4885pt.
 
@@ -1646,7 +1644,7 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 
 ] [12
 
-] <rankings.png, id=241, 636.3775pt x 368.37625pt>
+] <rankings.png, id=307, 636.3775pt x 368.37625pt>
 File: rankings.png Graphic file (type png)
 
 <use rankings.png>
@@ -1655,7 +1653,7 @@ Package pdftex.def Info: rankings.png used on input line 324.
  [13
 
  <./rankings.png>]
-<stack.png, id=263, 791.20593pt x 194.97844pt>
+<stack.png, id=334, 791.20593pt x 194.97844pt>
 File: stack.png Graphic file (type png)
  <use stack.png>
 Package pdftex.def Info: stack.png used on input line 333.
@@ -1667,7 +1665,7 @@ Overfull \hbox (25.73413pt too wide) in paragraph at lines 333--333
 
 [14
 
- <./stack.png>] <jobs.png, id=283, 469.755pt x 433.62pt>
+ <./stack.png>] <jobs.png, id=358, 469.755pt x 433.62pt>
 File: jobs.png Graphic file (type png)
  <use jobs.png>
 Package pdftex.def Info: jobs.png used on input line 348.
@@ -1675,7 +1673,7 @@ Package pdftex.def Info: jobs.png used on input line 348.
 
 [15
 
- <./jobs.png>] <citeR.jpg, id=303, 501.875pt x 590.205pt>
+ <./jobs.png>] <citeR.jpg, id=383, 501.875pt x 590.205pt>
 File: citeR.jpg Graphic file (type jpg)
  <use citeR.jpg>
 Package pdftex.def Info: citeR.jpg used on input line 361.
@@ -1687,7 +1685,7 @@ Package pdftex.def Info: citeR.jpg used on input line 361.
 
 ] [18
 
-] <john.jpg, id=357, 1546.77875pt x 1465.475pt>
+] <john.jpg, id=451, 1546.77875pt x 1465.475pt>
 File: john.jpg Graphic file (type jpg)
 
 <use john.jpg>
@@ -1695,7 +1693,7 @@ Package pdftex.def Info: john.jpg used on input line 392.
 (pdftex.def)             Requested size: 154.68694pt x 146.55608pt.
  [19
 
- <./john.jpg>] <rr.jpg, id=376, 325.215pt x 225.84375pt>
+ <./john.jpg>] <rr.jpg, id=475, 325.215pt x 225.84375pt>
 File: rr.jpg Graphic file (type jpg)
 
 <use rr.jpg>
@@ -1727,57 +1725,9 @@ Package pdftex.def Info: rr.jpg used on input line 402.
 ] [31
 
 ]
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.480 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.480 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.480 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.480 \end{frame}
-                 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <14.4> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 480.
-[32
+ [32
 
 ]
 \openout4 = `atelier-R-GERAD.vrb'.
@@ -2256,15 +2206,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1782.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1782.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1782.
 
+Package rerunfilecheck Info: File `atelier-R-GERAD.out' has not changed.
+(rerunfilecheck)             Checksum: 218F487A7B85418E9AB8804883AFFEEC;1026.
 
-
-Package rerunfilecheck Warning: File `atelier-R-GERAD.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `atelier-R-GERAD.out':
-(rerunfilecheck)             Before: 8FEF84702F2AD591732EA29FB0801611;663
-(rerunfilecheck)             After:  218F487A7B85418E9AB8804883AFFEEC;1026.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2274,53 +2218,35 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1782.
  ) 
 Here is how much of TeX's memory you used:
- 23193 strings out of 495028
- 437461 string characters out of 6181498
- 513070 words of memory out of 5000000
- 25384 multiletter control sequences out of 15000+600000
+ 23253 strings out of 495028
+ 438003 string characters out of 6181498
+ 513256 words of memory out of 5000000
+ 25450 multiletter control sequences out of 15000+600000
  60469 words of font info for 125 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  61i,15n,96p,497b,840s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.4.1.72} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.3.1.70} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.2.1.66} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.4.62} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.3.45} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.1.2.24} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sftt1095.pfb>
-Output written on atelier-R-GERAD.pdf (109 pages, 1387958 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sftt1095.pfb>
+Output written on atelier-R-GERAD.pdf (109 pages, 1413044 bytes).
 PDF statistics:
- 1961 PDF objects out of 2073 (max. 8388607)
- 1790 compressed objects within 18 object streams
- 253 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2443 PDF objects out of 2487 (max. 8388607)
+ 2267 compressed objects within 23 object streams
+ 247 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
