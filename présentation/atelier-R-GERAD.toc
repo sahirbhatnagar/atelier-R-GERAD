@@ -8,15 +8,15 @@
 \beamer@subsectionintoc {2}{1}{Les fonctions}{49}{0}{2}
 \beamer@subsectionintoc {2}{2}{Les objets R}{61}{0}{2}
 \beamer@subsectionintoc {2}{3}{Commandes R}{83}{0}{2}
-\beamer@subsectionintoc {2}{4}{Sommaire}{100}{0}{2}
-\beamer@sectionintoc {3}{3. Graphiques}{102}{0}{3}
-\beamer@subsectionintoc {3}{1}{La fonction plot}{104}{0}{3}
-\beamer@subsectionintoc {3}{2}{\texttt {histogram} et \texttt {boxplot}}{111}{0}{3}
-\beamer@subsectionintoc {3}{3}{Sommaire}{118}{0}{3}
-\beamer@sectionintoc {4}{4. Statistiques}{120}{0}{4}
-\beamer@subsectionintoc {4}{1}{Moyenne, \IeC {\'e}cart type}{121}{0}{4}
-\beamer@subsectionintoc {4}{2}{Test t et analyse de variance}{128}{0}{4}
-\beamer@subsectionintoc {4}{3}{Mod\IeC {\`e}les lin\IeC {\'e}aires}{136}{0}{4}
-\beamer@subsectionintoc {4}{4}{Sommaire}{142}{0}{4}
-\beamer@sectionintoc {5}{5. Rapports reproductibles}{144}{0}{5}
-\beamer@subsectionintoc {5}{1}{Introduction}{145}{0}{5}
+\beamer@subsectionintoc {2}{4}{Sommaire}{102}{0}{2}
+\beamer@sectionintoc {3}{3. Graphiques}{104}{0}{3}
+\beamer@subsectionintoc {3}{1}{La fonction plot}{106}{0}{3}
+\beamer@subsectionintoc {3}{2}{\texttt {histogram} et \texttt {boxplot}}{113}{0}{3}
+\beamer@subsectionintoc {3}{3}{Sommaire}{120}{0}{3}
+\beamer@sectionintoc {4}{4. Statistiques}{122}{0}{4}
+\beamer@subsectionintoc {4}{1}{Moyenne, \IeC {\'e}cart type}{123}{0}{4}
+\beamer@subsectionintoc {4}{2}{Test t et analyse de variance}{132}{0}{4}
+\beamer@subsectionintoc {4}{3}{Mod\IeC {\`e}les lin\IeC {\'e}aires}{140}{0}{4}
+\beamer@subsectionintoc {4}{4}{Sommaire}{148}{0}{4}
+\beamer@sectionintoc {5}{5. Rapports reproductibles}{150}{0}{5}
+\beamer@subsectionintoc {5}{1}{Introduction}{151}{0}{5}

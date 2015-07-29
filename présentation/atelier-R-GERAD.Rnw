@@ -752,8 +752,8 @@ q()
 \item Comprendre ce qui est un fonction et comment l'utiliser
 \item Identifier les principaux types d'objets dans R: \code{vector, matrix, data frame} et \code{list} 
 \item Cr\'{e}er et manipuler ces objets
-\item Importer des fichiers \code{txt} et \code{csv}
-\item Installer un package
+\item Importer des fichiers \code{.txt} et \code{.csv}
+\item Installer un \textit{package}
 \end{enumerate}
 \end{block}
 }
@@ -1246,8 +1246,8 @@ x[2] <- 5
 \end{center}
 
 \end{itemize}
-
-<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE, size='small'>>=
 # création d'un data frame
 d <- data.frame(Noms = c("Pierre", "Jean", "Jacques"),
 Age = c(42, 34, 19),
@@ -1352,11 +1352,11 @@ load("mtcars.RData")
 
 \begin{itemize}
   \setlength\itemsep{1em}
-\item Un \textbf{\textit{package}} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
+\item Un \textit{\textbf{package}} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
 système ou d'en ajouter de nouvelles
 \item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
-
+\pause
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
 # installer des packages pour créer des rapports
 # reproductibles
@@ -1609,13 +1609,13 @@ dev.off()
 \code{png()}\textcolor{beige}{textttt}
 \code{dev.off()}\textcolor{beige}{textttt}}; 
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-3.1cm] 
 {\footnotesize Fonctions pour créer les graphiques};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.4cm] 
 {\footnotesize Arguments communs pour ces fonctions};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.5cm] 
 {\footnotesize Fonctions pour enregistrer les graphiques};
 \end{tikzpicture}
 %}
@@ -1653,7 +1653,7 @@ dev.off()
 \begin{itemize}
   \setlength\itemsep{2em}
 \item fonctions principales: \code{mean(), var(), sd(), min(), max()}
-\item la fonction \code{summary()} est utile pour calculer quelques statistiques de bases pour un \textit{data frame}
+\pause \item la fonction \code{summary()} est utile pour calculer quelques statistiques de bases pour un \textit{data frame}
 \end{itemize}
 \pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
@@ -1669,7 +1669,7 @@ summary(mtcars)
 \begin{itemize}
   \setlength\itemsep{1em}
 \item Pour calculer des statistiques plus compliquées sur un \textit{data frame} (ou \textit{matrix}), on utilise la fonction \code{apply}
-\item La fonction apply sert à appliquer une fonction quelconque sur une partie d'un \textit{matrix} ou \textit{data frame}
+\pause \item La fonction \code{apply} sert à appliquer une fonction quelconque sur une partie d'un \textit{matrix} ou \textit{data frame}
 \end{itemize}
 
 
@@ -1810,10 +1810,10 @@ summary(aov.spray)
 \begin{itemize}
   \setlength\itemsep{1.5em}
   \item Les formules représentent un élément-clé des analyses statistiques avec R
-  \item La notation utilisée est la m\^{e}me pour (presque) toutes les fonctions
-  \item Une formule est typiquement de la forme 
+  \pause \item La notation utilisée est la m\^{e}me pour (presque) toutes les fonctions
+  \pause \item Une formule est typiquement de la forme 
   \begin{center}
-  \code{y \sim model}
+  \code{y $\sim$ model}
   \end{center} 
   \pause \begin{enumerate}
   \item \code{y}: est la réponse analysée 
@@ -1846,7 +1846,7 @@ summary(fit)
 \begin{frame}[fragile]{GLM}
 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-# est-ce que gpa et rank sont relier à gre
+# régression logistique
 fit.glm <- glm(admit ~ gre+gpa+rank, data = admit, 
            family = binomial(link = "logit"))
 
@@ -1874,21 +1874,22 @@ summary(fit.glm)
  %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
 \begin{tikzpicture}
 \node (expr) [startstop] {\code{mean()}
-\code{var()}\textcolor{pinkish}{texxxx}
+\code{var()}\textcolor{pinkish}{texxxxxx}
 \code{sd()}\textcolor{pinkish}{texxxx} 
 \code{min()}\textcolor{pinkish}{texxxx}
 \code{max()}\textcolor{pinkish}{texxxx}
-\code{median()}\textcolor{pinkish}{texxxx}};
+\code{median()}\textcolor{pinkish}{texxxx}
+\code{apply()}\textcolor{pinkish}{texxxx}};
 \node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{aov()}
 \code{t.test()}\textcolor{background}{textttt}
 \code{chisq.test()}\textcolor{background}{textttt}};
 \node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {\code{lm()}
-\code{glm()}\textcolor{beige}{textttt}}; 
+\code{glm()}\textcolor{beige}{textdddttt}}; 
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-3.6cm] 
 {\footnotesize Fonctions pour des statistiques descriptives};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-2.1cm] 
 {\footnotesize Tests statistiques};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 

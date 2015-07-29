@@ -813,8 +813,8 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \item Comprendre ce qui est un fonction et comment l'utiliser
 \item Identifier les principaux types d'objets dans R: \code{vector, matrix, data frame} et \code{list} 
 \item Cr\'{e}er et manipuler ces objets
-\item Importer des fichiers \code{txt} et \code{csv}
-\item Installer un package
+\item Importer des fichiers \code{.txt} et \code{.csv}
+\item Installer un \textit{package}
 \end{enumerate}
 \end{block}
 }
@@ -1471,8 +1471,8 @@ names & & étiquettes des éléments d’un objet\LL
 \end{center}
 
 \end{itemize}
-
-\begin{knitrout}
+\pause 
+\begin{knitrout}\small
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{unnamed-chunk-26}\begin{alltt}
 \hlcom{# création d'un data frame}
@@ -1593,11 +1593,11 @@ enregistrer  & \code{write.table()} &  \code{save()} &   File -> Save As..      
 
 \begin{itemize}
   \setlength\itemsep{1em}
-\item Un \textbf{\textit{package}} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
+\item Un \textit{\textbf{package}} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
 système ou d'en ajouter de nouvelles
 \item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
-
+\pause
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{unnamed-chunk-30}\begin{alltt}
@@ -1874,13 +1874,13 @@ système ou d'en ajouter de nouvelles
 \code{png()}\textcolor{beige}{textttt}
 \code{dev.off()}\textcolor{beige}{textttt}}; 
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-3.1cm] 
 {\footnotesize Fonctions pour créer les graphiques};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.4cm] 
 {\footnotesize Arguments communs pour ces fonctions};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.5cm] 
 {\footnotesize Fonctions pour enregistrer les graphiques};
 \end{tikzpicture}
 %}
@@ -1918,7 +1918,7 @@ système ou d'en ajouter de nouvelles
 \begin{itemize}
   \setlength\itemsep{2em}
 \item fonctions principales: \code{mean(), var(), sd(), min(), max()}
-\item la fonction \code{summary()} est utile pour calculer quelques statistiques de bases pour un \textit{data frame}
+\pause \item la fonction \code{summary()} est utile pour calculer quelques statistiques de bases pour un \textit{data frame}
 \end{itemize}
 \pause 
 \begin{knitrout}
@@ -1938,7 +1938,7 @@ système ou d'en ajouter de nouvelles
 \begin{itemize}
   \setlength\itemsep{1em}
 \item Pour calculer des statistiques plus compliquées sur un \textit{data frame} (ou \textit{matrix}), on utilise la fonction \code{apply}
-\item La fonction apply sert à appliquer une fonction quelconque sur une partie d'un \textit{matrix} ou \textit{data frame}
+\pause \item La fonction \code{apply} sert à appliquer une fonction quelconque sur une partie d'un \textit{matrix} ou \textit{data frame}
 \end{itemize}
 
 
@@ -2095,10 +2095,10 @@ système ou d'en ajouter de nouvelles
 \begin{itemize}
   \setlength\itemsep{1.5em}
   \item Les formules représentent un élément-clé des analyses statistiques avec R
-  \item La notation utilisée est la m\^{e}me pour (presque) toutes les fonctions
-  \item Une formule est typiquement de la forme 
+  \pause \item La notation utilisée est la m\^{e}me pour (presque) toutes les fonctions
+  \pause \item Une formule est typiquement de la forme 
   \begin{center}
-  \code{y \sim model}
+  \code{y $\sim$ model}
   \end{center} 
   \pause \begin{enumerate}
   \item \code{y}: est la réponse analysée 
@@ -2137,7 +2137,7 @@ système ou d'en ajouter de nouvelles
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{1, 1, 1}\color{fgcolor}\begin{kframe}
 \begin{rcode}\label{unnamed-chunk-42}\begin{alltt}
-\hlcom{# est-ce que gpa et rank sont relier à gre}
+\hlcom{# régression logistique}
 \hlstd{fit.glm} \hlkwb{<-} \hlkwd{glm}\hlstd{(admit} \hlopt{~} \hlstd{gre}\hlopt{+}\hlstd{gpa}\hlopt{+}\hlstd{rank,} \hlkwc{data} \hlstd{= admit,}
            \hlkwc{family} \hlstd{=} \hlkwd{binomial}\hlstd{(}\hlkwc{link} \hlstd{=} \hlstr{"logit"}\hlstd{))}
 
@@ -2167,21 +2167,22 @@ système ou d'en ajouter de nouvelles
  %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
 \begin{tikzpicture}
 \node (expr) [startstop] {\code{mean()}
-\code{var()}\textcolor{pinkish}{texxxx}
+\code{var()}\textcolor{pinkish}{texxxxxx}
 \code{sd()}\textcolor{pinkish}{texxxx} 
 \code{min()}\textcolor{pinkish}{texxxx}
 \code{max()}\textcolor{pinkish}{texxxx}
-\code{median()}\textcolor{pinkish}{texxxx}};
+\code{median()}\textcolor{pinkish}{texxxx}
+\code{apply()}\textcolor{pinkish}{texxxx}};
 \node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{aov()}
 \code{t.test()}\textcolor{background}{textttt}
 \code{chisq.test()}\textcolor{background}{textttt}};
 \node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {\code{lm()}
-\code{glm()}\textcolor{beige}{textttt}}; 
+\code{glm()}\textcolor{beige}{textdddttt}}; 
 \draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-3.6cm] 
 {\footnotesize Fonctions pour des statistiques descriptives};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
-  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-2.1cm] 
 {\footnotesize Tests statistiques};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 
