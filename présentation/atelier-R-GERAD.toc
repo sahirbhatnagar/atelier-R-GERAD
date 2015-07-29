@@ -1,18 +1,22 @@
 \beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{1.Pr\'{e}sentation du langage R}{10}{0}{1}
-\beamer@subsectionintoc {1}{1}{Pourquoi vous \^{e}tes l\`{a}?}{12}{0}{1}
-\beamer@subsectionintoc {1}{2}{Bref historique}{18}{0}{1}
-\beamer@subsectionintoc {1}{3}{Caract\'{e}ristiques de R}{25}{0}{1}
-\beamer@subsectionintoc {1}{4}{D\'{e}marrer une session}{40}{0}{1}
-\beamer@sectionintoc {2}{2.Bases du langage R}{46}{0}{2}
-\beamer@subsectionintoc {2}{1}{Les fonctions}{48}{0}{2}
-\beamer@subsectionintoc {2}{2}{Les objets R}{60}{0}{2}
-\beamer@subsectionintoc {2}{3}{Commandes R}{81}{0}{2}
-\beamer@subsectionintoc {2}{4}{Sommaire}{98}{0}{2}
-\beamer@sectionintoc {3}{3. Graphiques}{100}{0}{3}
-\beamer@subsectionintoc {3}{1}{La fonction plot}{102}{0}{3}
-\beamer@subsectionintoc {3}{2}{\texttt {histogram} et \texttt {boxplot}}{108}{0}{3}
-\beamer@sectionintoc {4}{4. Statistiques}{111}{0}{4}
-\beamer@subsectionintoc {4}{1}{Les objets R}{112}{0}{4}
-\beamer@sectionintoc {5}{5. Cr\'{e}er des rapports reproductibles}{113}{0}{5}
-\beamer@subsectionintoc {5}{1}{Les objets R}{114}{0}{5}
+\beamer@sectionintoc {1}{1.Pr\'{e}sentation du langage R}{11}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pourquoi \^{e}tes-vous l\`{a}?}{13}{0}{1}
+\beamer@subsectionintoc {1}{2}{Bref historique}{19}{0}{1}
+\beamer@subsectionintoc {1}{3}{Caract\'{e}ristiques de R}{26}{0}{1}
+\beamer@subsectionintoc {1}{4}{D\'{e}marrer une session}{41}{0}{1}
+\beamer@sectionintoc {2}{2.Bases du langage R}{47}{0}{2}
+\beamer@subsectionintoc {2}{1}{Les fonctions}{49}{0}{2}
+\beamer@subsectionintoc {2}{2}{Les objets R}{61}{0}{2}
+\beamer@subsectionintoc {2}{3}{Commandes R}{83}{0}{2}
+\beamer@subsectionintoc {2}{4}{Sommaire}{100}{0}{2}
+\beamer@sectionintoc {3}{3. Graphiques}{102}{0}{3}
+\beamer@subsectionintoc {3}{1}{La fonction plot}{104}{0}{3}
+\beamer@subsectionintoc {3}{2}{\texttt {histogram} et \texttt {boxplot}}{111}{0}{3}
+\beamer@subsectionintoc {3}{3}{Sommaire}{118}{0}{3}
+\beamer@sectionintoc {4}{4. Statistiques}{120}{0}{4}
+\beamer@subsectionintoc {4}{1}{Moyenne, \IeC {\'e}cart type}{121}{0}{4}
+\beamer@subsectionintoc {4}{2}{Test t et analyse de variance}{128}{0}{4}
+\beamer@subsectionintoc {4}{3}{Mod\IeC {\`e}les lin\IeC {\'e}aires}{136}{0}{4}
+\beamer@subsectionintoc {4}{4}{Sommaire}{142}{0}{4}
+\beamer@sectionintoc {5}{5. Rapports reproductibles}{144}{0}{5}
+\beamer@subsectionintoc {5}{1}{Introduction}{145}{0}{5}

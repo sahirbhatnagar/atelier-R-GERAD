@@ -160,6 +160,18 @@ knitr::read_chunk("slides-packages.R")
 
 \maketitle
 
+\begin{frame}{Programmation de la journée}
+\begin{itemize}
+\item 09H00 : Début de l'atelier
+\item 10H00 - 10H20: pause
+\item 12H00 - 13H00: lunch
+\item 15H00 -  15H20: pause
+\item 17H00 : fin de l'atelier
+\end{itemize}
+\end{frame}
+
+
+
 \begin{frame}{Remerciements}
 % \hspace*{-1.9cm}\parbox[t]{\textwidth}
 %\frametitle{Acknowledgements}
@@ -190,8 +202,8 @@ knitr::read_chunk("slides-packages.R")
 
 \begin{frame}{Avis \#1}
 \begin{itemize}
-\item Ce\c{c}i est un \textbf{introduction} au langage R
-\pause \item On va faire beaucoup d'exercises
+\item Ceci est une \textbf{introduction} au langage R
+\pause \item On va faire beaucoup d'exercices
 \pause \item N'h\'{e}sitez pas \`{a} posez des questions
 \end{itemize}
 \end{frame}
@@ -212,7 +224,7 @@ knitr::read_chunk("slides-packages.R")
 \begin{itemize}
 \item Le mat\'{e}riel pour cet atelier est bas\'{e} sur plusieurs ressources
 \item Voir ce lien pour une liste compl\`{e}te de r\'{e}f\'{e}rences: \href{https://github.com/sahirbhatnagar/atelier-R-GERAD}{https://github.com/sahirbhatnagar/atelier-R-GERAD}
-\item Je vous sugg\`{e}re les livre de Vincent Goulet et Hadley Wickham
+\item Je vous sugg\`{e}re les livres de Vincent Goulet et Hadley Wickham
 \end{itemize}
 
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
@@ -242,11 +254,11 @@ knitr::read_chunk("slides-packages.R")
 \setbeamercolor{normal text}{fg=black,bg=background}
 \begin{frame}[plain]
 \hspace*{-1.0cm}\parbox[t]{\textwidth}{
-\begin{block}{Après cet atelier vous devrez \^{e}tres capables de}
+\begin{block}{Après cet atelier vous devriez \^{e}tre capables de}
 \begin{itemize}
 \item Comprendre, créer et modifier les 4 objets de bases en R (\code{vector, data.frame, matrix, list}) 
 \item Utiliser des fonctions de bases
-\item Importé un jeux de donnés à partir d'un fichier externe
+\item Importer un jeux de données à partir d'un fichier externe
 \item Créer un graphique 
 \end{itemize}
 \end{block}
@@ -272,8 +284,8 @@ knitr::read_chunk("slides-packages.R")
 \begin{block}{Objectifs du chapitre}
 \begin{enumerate}
 \item Comprendre les avantages d'apprendre R
-\item Conna\^{\i}tre la provenance du R et ses charact\'{e}ristiques
-\item D\'{e}marrer une session R et ex\'{e}cuter des commandes simple
+\item Conna\^{\i}tre la provenance du R et ses caract\'{e}ristiques
+\item D\'{e}marrer une session R et ex\'{e}cuter des commandes simples
 \item Cr\'{e}er, modifier et sauvegarder ses propres fichiers de \mbox{script R}
 \end{enumerate}
 \end{block}
@@ -283,7 +295,7 @@ knitr::read_chunk("slides-packages.R")
 
 
 \setbeamercolor{normal text}{fg=gray,bg=white}
-\subsection{Pourquoi vous \^{e}tes l\`{a}?}
+\subsection{Pourquoi \^{e}tes-vous l\`{a}?}
 
 \begin{frame}
  \begin{center}
@@ -302,11 +314,11 @@ knitr::read_chunk("slides-packages.R")
 
 \vspace{0.2in}
 
-Les meilleurs langage de programmation en 2015 selon \href{http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages}{\mbox{IEEE Spectrum}} \\
+Les meilleurs langages de programmation en 2015 selon \href{http://spectrum.ieee.org/computing/software/the-2015-top-ten-programming-languages}{\mbox{IEEE Spectrum}} \\
 \end{frame}
 
 
-\begin{frame}{Plus de 100,000 questions pos\'{e}s dans les forums}
+\begin{frame}{Plus de 100 000 questions pos\'{e}es dans les forums}
 
 \includegraphics[scale=0.40]{stack.png}
 \newline
@@ -317,7 +329,7 @@ Les meilleurs langage de programmation en 2015 selon \href{http://spectrum.ieee.
 
 
 
-\begin{frame}{Nombres d'emplois}
+\begin{frame}{Nombre d'emplois}
 
 \begin{center}
 \includegraphics[scale=0.47]{jobs.png}
@@ -346,9 +358,9 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}{Analyser vos données}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item \'{E}norme resources d'outils statistiques
+\item Plusieurs ressources d'outils statistiques
 \item Représenter graphiquement des jeux de données multivariables
-\item Intégrer votre code R avec des sites internet
+\item Intégrer votre code R dans des applications web
 \item Assurer la reproductivité de vos analyses
 \end{itemize}
 \end{frame}
@@ -378,7 +390,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{center}
 \begin{figure}
 \includegraphics[scale=0.60]{rr.jpg}
-\caption{Inspir\'{e}s par le S, Ross Ihaka (gauche) et Robert Gentleman de l'Universit\'{e} d'Auckland en Nouvelle-Z\'{e}lande ont lanc\'{e} la premi\`{e}re version de R en 1996}
+\caption{Inspir\'{e}s par le S, Ross Ihaka (gauche) et Robert Gentleman (droite) de l'Universit\'{e} d'Auckland en Nouvelle-Z\'{e}lande ont lanc\'{e} la premi\`{e}re version de R en 1996}
 \end{figure}
 \end{center}
 \end{frame}
@@ -392,7 +404,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \pause \item 2 raisons qui ont fortement contribu\'{e} \`{a} la perte d'influence de S-PLUS
 \begin{enumerate}
 \item \normalsize Disponible gratuitement
-\pause \item Ouvert aux contribution de tous
+\pause \item Ouvert aux contributions de tous
 \end{enumerate}
 \end{itemize}
 \end{frame}
@@ -412,8 +424,8 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{frame}{Langage de programmation orientée objet}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Ca permet de facilement trouver et ré-utiliser les résultats de tes analyses
-\pause \item Une fonction peut complété plusieurs t\^{a}ches
+\item Cela permet de facilement trouver et ré-utiliser les résultats de tes analyses
+\pause \item Une fonction peut compléter plusieurs t\^{a}ches
 \end{itemize}
 \end{frame}
 
@@ -422,9 +434,9 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{itemize}
   \setlength\itemsep{2em}
 \item Langage de programmation interpr\'{e}t\'{e} (versus \code{C}, \code{C++}, \code{JAVA})
-\item Plus accessible qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticens, épidémiologistes, ect. d'utiliser R  
-\pause \item Le programme qu'on lance pour utiliser R est l'interpr\`{e}te
-\pause \item Celui-ci prend des commandes en R, qu'il ex\`{e}cutera imm\'{e}diatement
+\item Plus accessible qu'un langage compilé $\rightarrow$ ce qui permet aux économistes, écologistes, biologistes, statisticiens, épidémiologistes, etc. d'utiliser R  
+\pause \item Le programme que l'on lance pour utiliser R est l'interpr\`{e}te
+\pause \item Celui-ci prend des commandes en R qu'il ex\'{e}cutera imm\'{e}diatement
 \pause \item  Autre exemple: \code{Python}
 \end{itemize}
 \end{frame}
@@ -434,7 +446,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 
 \begin{itemize}
   \setlength\itemsep{1.5em}
-\item D\'{e}veloppement actif pour la cr\'{e}ation de nouveau outils dans plusieurs domaines  
+\item D\'{e}veloppement actif pour la cr\'{e}ation de nouveaux outils dans plusieurs domaines  
 \begin{itemize}
 \item \href{https://cran.r-project.org/web/views/}{https://cran.r-project.org/web/views/}
 \end{itemize} 
@@ -442,7 +454,7 @@ Publi\'{e} dans \href{http://www.nature.com/news/programming-tools-adventures-wi
 \begin{itemize}
 \item \href{http://www.r-pkg.org/}{http://www.r-pkg.org/}
 \end{itemize}
-\item Bien document\'{e} avec beaucoups de resources gratuit disponible sur l'internet  
+\item Bien documenter avec beaucoup de ressources gratuites disponibles sur l'internet  
 \begin{itemize}
 \item \href{http://stackoverflow.com/questions/tagged/r}{stackoverflow}
 \item \href{http://www.rdocumentation.org/}{http://www.rdocumentation.org/} \item \href{http://www.r-bloggers.com/}{http://www.r-bloggers.com/} 
@@ -518,7 +530,7 @@ c(1,2,3) + c(4,5,6)
 \begin{frame}{La rubrique d'aide}
 \begin{itemize}
   \setlength\itemsep{2em}
-\item \textbf{Usage:} le nom de la fonction, tous ses arguments, et les valeurs par défaut
+\item \textbf{Usage:} le nom de la fonction, tous ses arguments et les valeurs par défaut
 \pause \item \textbf{Value:} le type d'objet retourné par la fonction
 \end{itemize}
 \end{frame}
@@ -561,8 +573,8 @@ c(1,2,3) + c(4,5,6)
 \makeatother
 \begin{frame}[fragile, plain]
 <<label, rcode=TRUE, eval=FALSE>>=
-# Démarrer l'interface pour le documentation
-# et naviguer les différentes resources
+# Démarrer l'interface pour la documentation
+# et naviguer les différentes ressources
 help.start()
 
 # trouver l'aide pour la fonction rnorm
@@ -700,12 +712,12 @@ v <- runif(12, min = 1, max = 10); v
 \begin{frame}[fragile, plain]
 <<rcode=TRUE, eval=FALSE>>=
 # trouver le répertoire où se trouve le
-# jeux de donnés 'morley', qui est inclu avec
+# jeux de données 'morley', qui est inclu avec
 # l'installation de R
 filepath <- system.file("data", "morley.tab", 
             package="datasets")
 
-# importer les donnés dans un objet appeller 'mm'
+# importer les données dans un objet appeller 'mm'
 mm <- read.table(filepath)
 
 # Graphique 
@@ -765,7 +777,7 @@ q()
 \begin{frame}{Définition et appel de fonctions}
 \begin{itemize}
  \setlength\itemsep{2em}
-\item Plutôt que d'écrire beaucoup de lignes de code pour des choses assez simples et répétitives on fait appel à des \textbf{fonctions}
+\item Plutôt que d'écrire plusieurs lignes de codes pour des choses assez simples et répétitives on fait appel à des \textbf{fonctions}
 \pause \item Une fonction est caractérisée par deux composantes:
 \pause 
 \begin{enumerate}
@@ -807,7 +819,7 @@ sqrt(49)
  \setlength\itemsep{0.5em}
 \item Certaines fonctions nécessitent plusieurs arguments et certains de ces arguments sont optionnels (aussi possible d'avoir aucun argument: \code{getwd()}) 
 \pause \item Les arguments optionnels possèdent une valeur par défaut
-\pause \item Si on ne spécifie pas de valeur, ces arguments prendront la valeur définie par défaut, sinon ils prendront la valeur spécifié
+\pause \item Si on ne spécifie pas de valeur, ces arguments prendront la valeur définie par défaut, sinon ils prendront la valeur spécifiée
 \end{itemize}
 \pause 
 
@@ -815,7 +827,7 @@ sqrt(49)
 # chercher la rubrique d'aide pour logarithme
 ?log
 
-# on précise pas de valeur pour le second argument
+# on ne précise pas de valeur pour le second argument
 log(2)
 
 # On peut spécifier le second argument en l'appelant par son nom
@@ -865,7 +877,7 @@ log(2, base = exp(1))
 %\pause \item Cela donne lieu à 5 types de données les plus souvent utilisées %dans l'analyse des données:
 %\end{itemize}
 %\pause 
-\ctable[caption={Les principales objets en R et leurs nom de fonction},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différent types}
+\ctable[caption={Les principaux objets en R et le nom de leurs fonctions},label=tab:table1,pos=h!,doinside=\small]{ccccc}{\tnote{tous les éléments doivent être du même type}\tnote[b]{les éléments peuvent être de différents types}
 }{
     																\FL
 dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
@@ -878,7 +890,7 @@ dimension	&  & homogène\tmark	    &	& hétérogène\tmark[b] \ML
 \end{frame}
 
 
-\begin{frame}[fragile]{Atomic vectors}
+\begin{frame}[fragile]{\textit{Atomic vectors}}
 
 \begin{itemize}
   \setlength\itemsep{2em}
@@ -895,16 +907,16 @@ c(1, 2, 5)
 
 
 
-\begin{frame}[fragile]{Atomic vectors}
+\begin{frame}[fragile]{\textit{Atomic vectors}}
 
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Les quatre types d'atomic vectors les plus utilisés: 
+\item Les quatre types d'\textit{atomic vectors} les plus utilisés: 
 \begin{enumerate}
-\item double (également appelé numeric)
-\item integer
-\item character
-\item logical
+\item \textit{double} (également appelé \textit{numeric})
+\item \textit{integer}
+\item \textit{character}
+\item \textit{logical}
 \end{enumerate}
 \end{itemize}
 \pause
@@ -955,18 +967,18 @@ is.atomic(dbl_var)
 \end{comment}
 
 
-\begin{frame}[fragile]{Coercion}
+\begin{frame}[fragile]{\textit{Coercion}}
 
 \begin{itemize}
   \setlength\itemsep{1em}
-\item Tous les éléments d'un atomic vector doivent être du même type
-\pause \item Lorsque vous essayez de combiner différents types, ils seront convertis du type le plus flexible
-\pause \item Types de moins à plus flexible sont:
+\item Tous les éléments d'un \textit{atomic vector} doivent être du même type
+\pause \item Lorsque vous essayez de combiner différents types, ils seront convertis au type le plus flexible
+\pause \item Types du moins au plus flexible sont:
 \begin{enumerate}
-\item logical 
-\item integer 
-\item double 
-\item character
+\item \textit{logical} 
+\item \textit{integer} 
+\item \textit{double} 
+\item \textit{character}
 \end{enumerate}
 \end{itemize}
 <<rcode=TRUE, eval = TRUE, tidy = FALSE>>=
@@ -977,9 +989,9 @@ str(c("a", 1))
 
 
 
-\begin{frame}[fragile]{Coercion}
+\begin{frame}[fragile]{\textit{Coercion}}
 \begin{itemize}
-\item La pluspart des opérations mathématiques vont convertir un atomic vector à un double ou integer
+\item La plupart des opérations mathématiques vont convertir un \textit{atomic vector} à un \textit{double} ou \textit{integer}
 \end{itemize}
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
 x <- c(FALSE, FALSE, TRUE)
@@ -992,12 +1004,12 @@ mean(x)
 \end{frame}
 
 
-\begin{frame}[fragile]{List}
+\begin{frame}[fragile]{\textit{List}}
 
 \begin{itemize}
   %\setlength\itemsep{2em}
-\item Les lists sont différent des atomic vectors parce que leurs éléments peuvent \^{e}tre de tout type
-\item La fonction pour créer un list est \code{list()}
+\item Les \textit{lists} sont différent des \textit{atomic vectors} parce que leurs éléments peuvent \^{e}tre de tout type
+\item La fonction pour créer un \textit{list} est \code{list()}
 \end{itemize}
 \pause
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'footnotesize'>>=
@@ -1033,13 +1045,13 @@ names & & étiquettes des éléments d’un objet\LL
 
 
 
-\begin{frame}[fragile]{Matrix}
+\begin{frame}[fragile]{\textit{Matrix}}
 
 \begin{itemize}
   \setlength\itemsep{1em}
-\item Les matrices ne sont rien d'autre que des vecteurs en 2 dimension
-\pause \item Surtout utilisés pour faire les calculs mathématiques (pensez à vos cours d'algèbre linéaire)
-\pause \item La fonction pour créer un matrix est \code{matrix()}
+\item Les matrices ne sont rien d'autre que des vecteurs en 2 dimensions
+\pause \item Surtout utilisées pour faire les calculs mathématiques (pensez à vos cours d'algèbre linéaire)
+\pause \item La fonction pour créer un \textit{matrix} est \code{matrix()}
 \end{itemize}
 \pause
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
@@ -1050,10 +1062,10 @@ matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
 \end{frame}
 
 
-\begin{frame}[fragile]{Matrix}
+\begin{frame}[fragile]{\textit{Matrix}}
 
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
-# automatiquement converti en données homogène
+# automatiquement converti en données homogènes
 matrix(c(1,2,3,"a","b","c"), nrow = 2, ncol = 3)
 @
 
@@ -1063,13 +1075,13 @@ matrix(c(1,2,3,"a","b","c"), nrow = 2, ncol = 3)
 
 
 
-\begin{frame}[fragile]{Data frame}
+\begin{frame}[fragile]{\textit{Data frame}}
 
 \begin{itemize}
   \setlength\itemsep{0.5em}
-\item Le data frame est un tableaux de données hétérogènes
+\item Le \textit{data frame} est un tableau de données hétérogènes
 %\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
-\pause \item La fonction pour créer un data frame est \code{data.frame()}
+\pause \item La fonction pour créer un \textit{data frame} est \code{data.frame()}
 \end{itemize}
 \pause
 <<rcode=TRUE, eval = TRUE, tidy = FALSE, size = 'normalsize'>>=
@@ -1078,6 +1090,21 @@ matrix(c(1,2,3,"a","b","c"), nrow = 2, ncol = 3)
 data.frame(id = c("didier","patrice","laurent"),
            age = c(37,34,32))
 @
+
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{La différence entre \textit{data frame} et \textit{matrix}?}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+  \normalsize
+\item \code{matrix}: calculs matriciels
+%\pause \item Utiliser lorsque différents sortes de données ont étés collecter sur les m\^{e}mes sujets (essaie clinique) 
+\item \code{data.frame}: toutes autres analyses de données hétérogènes
+\end{itemize}
 
 \end{frame}
 
@@ -1181,14 +1208,14 @@ b
 
 
 
-\begin{frame}[fragile]{Indexation d'un vector}
+\begin{frame}[fragile]{Indexation d'un \textit{vector}}
 \begin{itemize}
   \setlength\itemsep{2em}
 \item L'indexation sert principalement à deux choses
 \pause \begin{enumerate}
 \normalsize
 \item extraire des éléments 
-\item les remplacer
+\item remplacer des éléments
 \end{enumerate}
 \end{itemize}
 \pause 
@@ -1209,13 +1236,13 @@ x[2] <- 5
 
 
 
-\begin{frame}[fragile]{Indi\c{c}age d'un data frame et matrix}
+\begin{frame}[fragile]{Indexation d'un \textit{data frame} et \textit{matrix}}
 
 \begin{itemize}
   \setlength\itemsep{2em}
-\item L'indexation des observations se fait à partir des rangés et colonnes du data frame et matrix:
+\item L'indexation des observations se fait à partir des rangées et colonnes du \textit{data frame} et \textit{matrix}:
 \begin{center}
-\code{d[rangé,colonne]}
+\code{d[rangée,colonne]}
 \end{center}
 
 \end{itemize}
@@ -1226,25 +1253,25 @@ d <- data.frame(Noms = c("Pierre", "Jean", "Jacques"),
 Age = c(42, 34, 19),
 Fumeur = c(TRUE, TRUE, FALSE))
 
-d[1, ] # première rangé
+d[1, ] # première rangée
 
 d[ ,1] # première colonne 
 
-d[3,2] # troisième rangé, deuxième colonne
+d[3,2] # troisième rangée, deuxième colonne
 @
 \end{frame}
 
 
 
 
-\begin{frame}[fragile]{Indi\c{c}age d'un list}
+\begin{frame}[fragile]{Indexation d'un \textit{list}}
 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
 # création d'un list
 x <- list(joueur = c("V", "C"),
 		  score = c(10, 12))
 		  
-# premier élément de la liste
+# premier élément de la list
 x[[1]]
 
 # 1er élément du 2e élément de la list
@@ -1253,11 +1280,11 @@ x[[2]][1]
 \end{frame}
 
 
-\begin{frame}[fragile]{Importer et enregistrer des donnés et du code}
+\begin{frame}[fragile]{Importer et enregistrer des données et du code}
 
 
 
-\ctable[caption={Les fonctions de bases pour importer et enregistrer des donnés et du code R},label=tab:table1,pos=h!,doinside=\small]{lccc}{\tnote{chaque valeur est séparée par un espace}\tnote[b]{chaque valeur est séparée par une virgule}\tnote[c]{objets dans ton espace de travail (Environment)}
+\ctable[caption={Les fonctions de bases pour importer et enregistrer des données et du code R},label=tab:table1,pos=h!,doinside=\small]{lccc}{\tnote{chaque valeur est séparée par un espace}\tnote[b]{chaque valeur est séparée par une virgule}\tnote[c]{objets dans ton espace de travail (Environment)}
 }{
     																\FL
         	  & fichiers	           &	 objets\tmark[c]  &    script R\ML
@@ -1271,7 +1298,7 @@ enregistrer  & \code{write.table()} &  \code{save()} &   File -> Save As..      
 \end{frame}
 
 
-\begin{frame}[fragile]{Importer des donnés}
+\begin{frame}[fragile]{Importer des données}
 \begin{itemize}
   \setlength\itemsep{2em}
 \item Il est nécessaire de préciser le chemin d'accès au fichier s'il n'est pas dans le répertoire de travail
@@ -1321,11 +1348,11 @@ load("mtcars.RData")
 
 
 
-\begin{frame}[fragile]{Installer de packages additionnels dans R}
+\begin{frame}[fragile]{Installer des \textit{packages} additionnels dans R}
 
 \begin{itemize}
   \setlength\itemsep{1em}
-\item Un \textbf{package} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
+\item Un \textbf{\textit{package}} R est un ensemble cohérent de fonctions, de jeux de données et de documentation permettant de compléter les fonctionnalités du
 système ou d'en ajouter de nouvelles
 \item La liste complète de ces packages est disponible sur le site \href{http://www.r-pkg.org/}{METACRAN}
 \end{itemize}
@@ -1381,7 +1408,7 @@ library(rmarkdown)
 {\footnotesize Objets R les plus utilisés};
 \draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
   ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3cm] 
-{\footnotesize Accesser les données et scripts R};
+{\footnotesize Accéder les données et scripts R};
 \end{tikzpicture}
 %}
 \end{frame}
@@ -1430,7 +1457,7 @@ library(rmarkdown)
 \begin{frame}[fragile]{Introduction aux graphiques en R}
 \begin{itemize}
   \setlength\itemsep{2em}
-  \item R offre une variété de graphiques remarquable 
+  \item R offre une variété de graphiques remarquables 
   \item Pour avoir une petite idée des possibilités offertes, il suffit de taper la commande \code{demo(graphics)} 
 \end{itemize}
 \end{frame}
@@ -1462,7 +1489,7 @@ ylab = "disp", main = "mpg vs. disp")
 \begin{itemize}
   \setlength\itemsep{1.5em}
 \item La fonction \code{plot} peut aussi prendre un objet du modèle linéaire comme argument
-\item Ceci est un exemple qui démontre pourquoi R est un langage orientée objet
+\pause \item Ceci est un exemple qui démontre pourquoi R est un langage orientée objet
 \end{itemize}
 \pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
@@ -1493,10 +1520,10 @@ plot(fit)
 
 \begin{itemize}
   \setlength\itemsep{1.5em}
-  \item Utile pour voir la distribution de tes données
-\item Pour les données continues et univariés
+  \item Utile pour voir la distribution des données
+\item Pour les données continues et univariées
 \end{itemize}
-
+\pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
 # la taille de 237 étudiants disponibles dans le jeu
 # de données 'survey' du library(MASS)
@@ -1520,19 +1547,82 @@ hist(survey$Height, labels = TRUE)
 
 \begin{itemize}
   \setlength\itemsep{2em}
-\item Utile pour voir la différence d'un variable continu entre plusieurs groupes
+\item Utile pour voir la différence d'une variable continue parmi plusieurs groupes
 \end{itemize}
-
+\pause 
 <<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
-# visualiser la différence de la taille entre les 
-# hommes et les femmes dans le jeu
+# visualiser la différence de taille entre les 
+# hommes et les femmes dans le jeux
 # de données 'survey' du library(MASS)
 
 boxplot(survey$Height ~ survey$Sex, 
-         ylab = "Taille (cm)")
+         ylab = "Taille (cm)",
+         col = c("lightpink","lightblue"))
 @
 
 \end{frame}
+
+
+\begin{frame}[fragile]{Sauvegarder les graphiques}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item 2 fonctions principales: \code{pdf()} et \code{png()}
+\item l'argument de ces fonctions est le nom du fichier désiré
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# enregistrer dans le répertoire de travail courant
+pdf("boxplot_survey.pdf")
+boxplot(survey$Height ~ survey$Sex, 
+         ylab = "Taille (cm)")
+dev.off()
+@
+
+\end{frame}
+
+
+
+\subsection{Sommaire}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Sommaire}}
+ \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Sommaire des commandes de graphiques}
+ %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
+\begin{tikzpicture}
+\node (expr) [startstop] {\code{plot()}
+\code{hist()}\textcolor{pinkish}{texxxx}
+\code{boxplot()}\textcolor{pinkish}{texxxx} };
+\node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{xlab}
+\code{ylab}\textcolor{background}{textttt}
+\code{main}\textcolor{background}{textttt}
+\code{type}\textcolor{background}{textttt}
+\code{col}\textcolor{background}{textttt}};
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {\code{pdf()}
+\code{png()}\textcolor{beige}{textttt}
+\code{dev.off()}\textcolor{beige}{textttt}}; 
+\draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+{\footnotesize Fonctions pour créer les graphiques};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+{\footnotesize Arguments communs pour ces fonctions};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 
+{\footnotesize Fonctions pour enregistrer les graphiques};
+\end{tikzpicture}
+%}
+\end{frame}
+
+
+
 
 
 \section{4. Statistiques}
@@ -1547,17 +1637,269 @@ boxplot(survey$Height ~ survey$Sex,
 \end{frame}
 
 \setbeamercolor{normal text}{fg=gray,bg=white}
-\subsection{Les objets R}
+
+\subsection{Moyenne, écart type}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Les objets R}}
+  \Huge{\textcolor{red}{Moyenne, écart type}}
  \end{center}
 \end{frame}
 
 
 
-\section{5. Cr\'{e}er des rapports reproductibles}
+\begin{frame}[fragile]{Moyenne, variance, écart type, minimum, maximum}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item fonctions principales: \code{mean(), var(), sd(), min(), max()}
+\item la fonction \code{summary()} est utile pour calculer quelques statistiques de bases pour un \textit{data frame}
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# enregistrer dans le répertoire de travail courant
+summary(mtcars)
+@
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{La fonction \code{apply}}
+\begin{itemize}
+  \setlength\itemsep{1em}
+\item Pour calculer des statistiques plus compliquées sur un \textit{data frame} (ou \textit{matrix}), on utilise la fonction \code{apply}
+\item La fonction apply sert à appliquer une fonction quelconque sur une partie d'un \textit{matrix} ou \textit{data frame}
+\end{itemize}
+
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]{La fonction \code{apply}}
+\begin{itemize}
+  \setlength\itemsep{1em}
+\item La syntaxe de la fonction est la suivante:
+\begin{center}
+\code{apply(X, MARGIN, FUN)}
+\end{center}
+\item \code{X}: un matrix ou data frame
+\item \code{MARGIN}: 1 si l'on veut faire des calculs sur les rangées, 2 sur les colonnes
+\item \code{FUN}: est la fonction à appliquer
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# variance par ligne
+apply(mtcars, 1, var)
+@
+
+
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{La fonction \code{apply}}
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# variance par colonne
+apply(mtcars, 2, var)
+
+# écart type par colonne
+apply(mtcars, 2, sd)
+
+# minimum de chaque rangée
+apply(mtcars, 1, min)
+
+
+# maximum de chaque rangée
+apply(mtcars, 1, max)
+@
+
+
+\end{frame}
+
+
+
+
+
+\subsection{Test t et analyse de variance}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Test t et analyse de variance}}
+ \end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Test t}
+
+\begin{itemize}
+  \setlength\itemsep{1.5em}
+  \item la fonction pour faire un test t est \code{t.test()}
+\end{itemize}
+\pause 
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# la taille de 237 étudiants disponible dans le jeux
+# de données 'survey' du library(MASS)
+# est-ce qu'il y a une différence de taille entre
+# les hommes et les femmes?
+
+t.test(Height ~ Sex, data = survey)
+@
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Analyse de variance}
+
+\begin{itemize}
+  \setlength\itemsep{2em}
+\item La fonction pour l'analyse de variance est \code{aov}
+\pause \item Prenons un jeux de données disponible dans R: \code{InsectSprays}
+\pause \item 6 insecticides ont été testés 12 fois en culture, la réponse observée étant le nombre d'insectes
+\pause \item Le but c'est de voir s'il y a une différence importante entre les 6 insecticides par rapport à le nombre d'insectes
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}[fragile]{Analyse de variance}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# boxplot pour voir la différence entre
+# les groupes
+boxplot(InsectSprays$count ~ InsectSprays$spray)
+
+# Les résultats ne sont pas affichés, ceux-ci sont 
+# copiés dans un objet nommé aov.spray
+aov.spray <- aov(count ~ spray, data = InsectSprays)
+
+# sommaire des résultats
+summary(aov.spray)
+@
+
+\end{frame}
+
+
+
+
+\subsection{Modèles linéaires}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Modèles linéaires}}
+ \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]{Les formules}
+
+\begin{itemize}
+  \setlength\itemsep{1.5em}
+  \item Les formules représentent un élément-clé des analyses statistiques avec R
+  \item La notation utilisée est la m\^{e}me pour (presque) toutes les fonctions
+  \item Une formule est typiquement de la forme 
+  \begin{center}
+  \code{y \sim model}
+  \end{center} 
+  \pause \begin{enumerate}
+  \item \code{y}: est la réponse analysée 
+  \item \code{model}: est un ensemble de termes pour lesquels les paramètres sont estimés
+  \end{enumerate}
+  \pause \item Ces termes sont séparés par des symboles arithmétiques mais qui ont ici une signification
+  particulière: \code{a+b}, \code{a*b}
+ \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]{Modèles linéaires}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# importer 'admit.txt'
+admit <- read.table("admit.txt", header = TRUE)
+
+# est-ce que gpa et rank sont reliés à gre
+fit <- lm(gre ~ gpa+rank, data = admit)
+
+# voir les résultats
+summary(fit)
+@
+
+\end{frame}
+
+
+\begin{frame}[fragile]{GLM}
+
+<<rcode=TRUE, eval = FALSE, tidy = FALSE>>=
+# est-ce que gpa et rank sont relier à gre
+fit.glm <- glm(admit ~ gre+gpa+rank, data = admit, 
+           family = binomial(link = "logit"))
+
+# voir les résultats
+summary(fit.glm)
+@
+
+\end{frame}
+
+
+
+
+\subsection{Sommaire}
+
+\begin{frame}
+ \begin{center}
+  \Huge{\textcolor{red}{Sommaire}}
+ \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Sommaire des commandes de statistiques}
+ %\hspace*{-1.9cm}\parbox[t]{\textwidth}{
+\begin{tikzpicture}
+\node (expr) [startstop] {\code{mean()}
+\code{var()}\textcolor{pinkish}{texxxx}
+\code{sd()}\textcolor{pinkish}{texxxx} 
+\code{min()}\textcolor{pinkish}{texxxx}
+\code{max()}\textcolor{pinkish}{texxxx}
+\code{median()}\textcolor{pinkish}{texxxx}};
+\node (fat) [startstop2, below of=expr, xshift=-.3cm, yshift=-2.0cm] {\code{aov()}
+\code{t.test()}\textcolor{background}{textttt}
+\code{chisq.test()}\textcolor{background}{textttt}};
+\node (script) [startstop3, below of=fat, xshift=.1cm, yshift=-1.5cm] {\code{lm()}
+\code{glm()}\textcolor{beige}{textttt}}; 
+\draw[decoration={brace,raise=5pt, amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]expr.south west) -- ([yshift=1pt]expr.north west) node [black,midway,xshift=-2.7cm] 
+{\footnotesize Fonctions pour des statistiques descriptives};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]fat.south west) -- ([yshift=1pt]fat.north west) node [black,midway,xshift=-3.3cm] 
+{\footnotesize Tests statistiques};
+\draw[decoration={brace,raise=5pt,amplitude=10pt},decorate,line width=1pt] 
+  ([yshift=-1pt]script.south west) -- ([yshift=1pt]script.north west) node [black,midway,xshift=-3.4cm] 
+{\footnotesize Fonctions pour les modèles de régression};
+\end{tikzpicture}
+%}
+\end{frame}
+
+
+
+\section{5. Rapports reproductibles}
 
 \setbeamercolor{normal text}{fg=gray,bg=black}
 \begin{frame}[plain]
@@ -1569,13 +1911,24 @@ boxplot(survey$Height ~ survey$Sex,
 \end{frame}
 
 \setbeamercolor{normal text}{fg=gray,bg=white}
-\subsection{Les objets R}
+\subsection{Introduction}
 
 \begin{frame}
  \begin{center}
-  \Huge{\textcolor{red}{Les objets R}}
+  \Huge{\textcolor{red}{Introduction}}
  \end{center}
 \end{frame}
+
+
+\begin{frame}{Introduction}
+\begin{itemize}
+\item \href{http://rmarkdown.rstudio.com/}{http://rmarkdown.rstudio.com/}
+\item \href{http://shiny.rstudio.com/gallery/}{http://shiny.rstudio.com/gallery/}
+\end{itemize}
+\end{frame}
+
+
+
 
 
 \begin{frame}[fragile]{Session Information}
