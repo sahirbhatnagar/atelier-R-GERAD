@@ -22,24 +22,6 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ----
 
-## Table des mati&egrave;res
-
-1. Pr&eacute;sentation du langage R
-  - Pourquoi vous etes la? rajouter la valeur a vos competences techniques
-  - Bref historique et descripton
-  - Charact&eacute;ristiques de R
-  - RStudio
-  - O&ugrave; trouver de la documentation (CRAN, [http://www.rdocumentation.org/](http://www.rdocumentation.org/), Google is your friend)
-  - Librairiees
-
-2. Bases du langage R
-  - Les objets R (vecteurs, matrices, data frames, listes)
-  - R&eacute;pertoire de travail
-
-
-
-----
-
 ## R&eacute;f&eacute;rences
 
 ### Livres
@@ -47,8 +29,6 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 * [Introduction &agrave; la programmation en R](https://cran.r-project.org/doc/contrib/Goulet_introduction_programmation_R.pdf)
 * [R pour les d&eacute;butants](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_fr.pdf)
 * [Advanced R](http://adv-r.had.co.nz/)
-* [Reproducible research with R and RStudio](http://www.amazon.com/exec/obidos/ASIN/1466572841/7210-20)
-* [Dynamic documents with R and knitr](http://www.amazon.com/exec/obidos/ASIN/1482203537/7210-20)
 
 
 ### Site Internet

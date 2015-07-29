@@ -17,7 +17,7 @@ str(df)
 hist(mtcars[,"mpg"])
 
 # régression linéaire
-fit <- lm(mpg ~ cyl, data=df)
+fit <- lm(mpg ~ disp, data=df)
 
 # sommaire des résultat
 summary(fit)

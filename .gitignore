@@ -1,4 +1,3 @@
-*.pdf
 outline
 *.aux
 *.log
@@ -7,3 +6,6 @@ outline
 *.snm
 *.tex
 *.toc
+*.jpg
+*.png
+*.sty
