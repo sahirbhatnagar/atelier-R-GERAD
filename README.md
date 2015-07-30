@@ -33,18 +33,45 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 ### Site Internet
 
+## Les bases du langage R
+
 * [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Introduction au langage R et &agrave; RStudio](http://www.aliquote.org/cours/misc/mooc/labs.pdf)
+
+## Les _packages_
+
 * [Lots de packages regroup&eacute;s par domaine](https://cran.r-project.org/web/views/)
-* [Catalogue des graphiques disponibles en R](http://shiny.stat.ubc.ca/r-graph-catalog/)
 * [Chercher des librairies](http://www.r-pkg.org/)
 * [What is an R-Project?](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)
+
+## Les forums et la documentation
+
 * [Stackoverflow](http://stackoverflow.com/questions/tagged/r)
 * [R Documentation](http://www.rdocumentation.org/)
 * [R Bloggers](http://www.r-bloggers.com/)
 * [Twitter #rstats](https://twitter.com/search?q=\%23rstats)
+
+
+## Rapport reproductibles avec RMarkdown et application Web
+
+* [Markdown](http://daringfireball.net/projects/markdown/syntax)
+* [RMarkdown](http://rmarkdown.rstudio.com/)
+* [Shiny](http://shiny.rstudio.com/)
+* [Les options code chunk](http://yihui.name/knitr/options/)
+* [HTML widgets](http://www.htmlwidgets.org/)
+
+
+## Divers
+
 * [Montréal UseR Group](http://www.meetup.com/Montreal-R-User-Group/)
 * [International UseR Groups](http://blog.revolutionanalytics.com/local-r-groups.html)
+* [Rapport reproductibles avec LaTeX](https://github.com/sahirbhatnagar/knitr-tutorial)
+
+
+
+
+
+
 
 
 ----

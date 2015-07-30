@@ -10,6 +10,8 @@
 # viens pré-installer avec R)
 df <- mtcars
 
+df <- mtcars[-1,]
+
 # voir les variables en df
 str(df)
 
