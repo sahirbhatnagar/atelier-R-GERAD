@@ -39,6 +39,8 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 
 * [Les bases du langage R](http://www.aliquote.org/cours/misc/mooc/introR.pdf)
 * [Introduction au langage R et &agrave; RStudio](http://www.aliquote.org/cours/misc/mooc/labs.pdf)
+* [ggplot2](http://docs.ggplot2.org/current/) 
+* [R Cookbook graphs](http://www.cookbook-r.com/Graphs/)
 
 ### Les _packages_
 
