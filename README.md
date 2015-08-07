@@ -61,6 +61,7 @@ Avec plus de 2 millions d'utilisateurs &agrave; travers le monde, `R` est le log
 * [Markdown](http://daringfireball.net/projects/markdown/syntax)
 * [RMarkdown](http://rmarkdown.rstudio.com/)
 * [&Eacute;laboration et conversion de documents avec Markdown et Pandoc](http://enacit1.epfl.ch/markdown-pandoc/)
+* [Un guide pour bien commencer avec markdown](http://blog.wax-o.com/2014/04/tutoriel-un-guide-pour-bien-commencer-avec-markdown/)
 * [Shiny](http://shiny.rstudio.com/)
 * [Les options code chunk](http://yihui.name/knitr/options/)
 * [HTML widgets](http://www.htmlwidgets.org/)
